@@ -13,7 +13,4 @@ assignees: ''
 ### Expected Performance
 
 
-### Acceptance Criteria
-
-
-### Tasks
+### Checklist
