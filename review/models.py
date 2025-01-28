@@ -54,4 +54,4 @@ class Comment(models.Model):
         ordering = ["-review"]
     
     def __str__(self):
-        return f"Comment {self.comment} by {self.author} on {self.review}"
+        return f"Comment: {self.comment} by {self.author} on {self.review}"
