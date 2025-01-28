@@ -11,9 +11,9 @@ class Review(models.Model):
     game_title = models.CharField(max_length=100, unique=True)
     review_title = models.CharField(max_length=200, unique=True)
     author = models.ForeignKey(
-    User, on_delete=models.CASCADE, related_name="reviews"
+    User, on_delete=models.CASCADE, related_name="reviewer"
 )
-    # related_name above may need to be changed!
+    # related_name above (and the three below) may need to be changed!
     platform_reviewed_on = models.IntegerField(choices=PLATFORM, default=None)
     index_excerpt = models.TextField()
     full_review = models.TextField()
@@ -30,3 +30,16 @@ class Review(models.Model):
     # commented out for now as this will need to be changed when we get to the image upload part
     approved = models.BooleanField(default=False)
     status = models.IntegerField(choices=STATUS, default=None)
+
+class Comment(models.Model):
+    review = models.ForeignKey(
+    Review, on_delete=models.CASCADE, related_name="comments"
+)
+    author = models.ForeignKey(
+    User, on_delete=models.CASCADE, related_name="commenter"
+)
+    game_title = models.ForeignKey(
+    Review, on_delete=models.CASCADE, related_name="relatedgame"
+)
+    comment = models.TextField()
+    approved = models.BooleanField(default=False)
