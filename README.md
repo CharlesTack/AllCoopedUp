@@ -118,3 +118,4 @@ Credit every tool, site and reference I've used on the project
 
 Note 23:
 Provide a list of people I'd like to personally thank.
+NB. Remember to thank Richard and Emma.
