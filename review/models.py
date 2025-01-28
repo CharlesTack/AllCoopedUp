@@ -31,6 +31,12 @@ class Review(models.Model):
     approved = models.BooleanField(default=False)
     status = models.IntegerField(choices=STATUS, default=None)
 
+    class Meta:
+        ordering = ["-game_title"]
+    
+    def __str__(self):
+        return f"{self.game_title} | written by {self.author}"
+
 class Comment(models.Model):
     review = models.ForeignKey(
     Review, on_delete=models.CASCADE, related_name="comments"
@@ -43,3 +49,9 @@ class Comment(models.Model):
 )
     comment = models.TextField()
     approved = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["-review"]
+    
+    def __str__(self):
+        return f"Comment {self.comment} by {self.author} on {self.review}"
