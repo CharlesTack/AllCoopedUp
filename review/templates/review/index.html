@@ -18,7 +18,7 @@
                                     <p class="author">Author: {{ review.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="review-link">
+                            <a href="{% url 'review_detail' review.slug %}" class="review-link">
                                 <h2 class="card-title">{{ review.game_title }}</h2>
                             </a>
                             <hr />

@@ -109,6 +109,12 @@ body {
 .review-subtitle {
     margin-left: 5%;
     color: lightgray;
+    font-style: italic;
+}
+
+.review-by {
+    margin-left: 5%;
+    color: lightgray;
 }
 
 .btn-signup,
