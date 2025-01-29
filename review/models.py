@@ -44,9 +44,6 @@ class Comment(models.Model):
     author = models.ForeignKey(
     User, on_delete=models.CASCADE, related_name="commenter"
 )
-    game_title = models.ForeignKey(
-    Review, on_delete=models.CASCADE, related_name="relatedgame"
-)
     comment = models.TextField()
     approved = models.BooleanField(default=False)
 
