@@ -1,7 +1,8 @@
 from django.contrib import admin
+from .models import About
 from django_summernote.admin import SummernoteModelAdmin
-from .models import About, CollaborateRequest
 
+# Add ", CollaborateRequest" to the .models import above when you're ready
 
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
@@ -17,9 +18,11 @@ class AboutAdmin(SummernoteModelAdmin):
 #       own projects, then inherit from admin.ModelAdmin like
 #       we do below.
 
-@admin.register(CollaborateRequest)
-class CollaborateRequestAdmin(admin.ModelAdmin):
-    """
-    Lists message and read fields for display in admin
-    """
-    list_display = ('message', 'read',)
+# Commented out below as it's too early for this yet
+
+# @admin.register(CollaborateRequest)
+# class CollaborateRequestAdmin(admin.ModelAdmin):
+#     """
+#     Lists message and read fields for display in admin
+#     """
+#     list_display = ('message', 'read',)
