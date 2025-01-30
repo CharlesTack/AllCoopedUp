@@ -75,7 +75,16 @@ def review_detail(request, slug):
 
 def comment_edit(request, slug, comment_id):
     """
-    view to edit comments
+    Display an individual comment for edit.
+
+    **Context**
+
+    ``review``
+        An instance of :model:`review.Review`.
+    ``comment``
+        A single comment related to the review.
+    ``comment_form``
+        An instance of :form:`review.ReviewForm`
     """
     if request.method == "POST":
 
@@ -92,5 +101,30 @@ def comment_edit(request, slug, comment_id):
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
             messages.add_message(request, messages.ERROR, 'Error updating comment!')
+
+    return HttpResponseRedirect(reverse('review_detail', args=[slug]))
+
+
+def comment_delete(request, slug, comment_id):
+    """
+    Delete an individual comment.
+
+    **Context**
+
+    ``review``
+        An instance of :model:`review.Review`.
+    ``comment``
+        A single comment related to the review.
+    """
+    queryset = Review.objects.filter(status=1)
+    review = get_object_or_404(queryset, slug=slug)
+    comment = get_object_or_404(Comment, pk=comment_id)
+
+    if comment.author == request.user:
+        comment.delete()
+        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+    else:
+        messages.add_message(request, messages.ERROR,
+                             'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('review_detail', args=[slug]))
