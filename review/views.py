@@ -1,14 +1,30 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
-from .models import Review
+from django.http import HttpResponseRedirect
+from .models import Review, Comment
 from .forms import CommentForm
 
 # Create your views here.
 class ReviewList(generic.ListView):
+    """
+    Returns all published posts in :model:`review.Review`
+    and displays them in a page of six reviews. 
+    **Context**
+
+    ``queryset``
+        All published instances of :model:`review.Review`
+    ``paginate_by``
+        Number of posts per page.
+        
+    **Template:**
+
+    :template:`review/index.html`
+    """
     queryset = Review.objects.filter(status=1).order_by("game_title")
     template_name = "review/index.html"
     paginate_by = 6
+
 
 def review_detail(request, slug):
     """
@@ -18,6 +34,12 @@ def review_detail(request, slug):
 
     ``review``
         An instance of :model:`review.Review`.
+    ``comments``
+        All approved comments related to the post.
+    ``comment_count``
+        A count of approved comments related to the post.
+    ``comment_form``
+        An instance of :form:`blog.CommentForm`
 
     **Template:**
 
@@ -49,3 +71,26 @@ def review_detail(request, slug):
          "comment_form": comment_form,
          },
     )
+
+
+def comment_edit(request, slug, comment_id):
+    """
+    view to edit comments
+    """
+    if request.method == "POST":
+
+        queryset = Review.objects.filter(status=1)
+        review = get_object_or_404(queryset, slug=slug)
+        comment = get_object_or_404(Comment, pk=comment_id)
+        comment_form = CommentForm(data=request.POST, instance=comment)
+
+        if comment_form.is_valid() and comment.author == request.user:
+            comment = comment_form.save(commit=False)
+            comment.review = review
+            comment.approved = False
+            comment.save()
+            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+
+    return HttpResponseRedirect(reverse('review_detail', args=[slug]))
