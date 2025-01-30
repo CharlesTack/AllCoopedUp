@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 PLATFORM = ((1, "Xbox"), (2, "PlayStation"), (3, "Nintendo"), (4, "PC"))
 RATING = ((1, "1⭐"), (2, "2⭐"), (3, "3⭐"), (4, "4⭐"), (5, "5⭐"))
@@ -14,6 +15,7 @@ class Review(models.Model):
     User, on_delete=models.CASCADE, related_name="reviewer"
 )
     # related_name above (and the three below) may need to be changed!
+    featured_image = CloudinaryField('image', default='missingboxart')
     platform_reviewed_on = models.IntegerField(choices=PLATFORM, default=None)
     index_excerpt = models.TextField()
     full_review = models.TextField()
