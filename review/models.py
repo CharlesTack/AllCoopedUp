@@ -28,8 +28,6 @@ class Review(models.Model):
     platform_availability_playstation = models.BooleanField(default=False)
     platform_availability_nintendo = models.BooleanField(default=False)
     platform_availability_pc = models.BooleanField(default=False)
-    # image_upload = models.ImageField(upload_to='images/', blank=True, null=True)
-    # commented out for now as this will need to be changed when we get to the image upload part
     approved = models.BooleanField(default=False)
     status = models.IntegerField(choices=STATUS, default=None)
 
