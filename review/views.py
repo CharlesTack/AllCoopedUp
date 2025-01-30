@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Review
+from .forms import CommentForm
 
 # Create your views here.
 class ReviewList(generic.ListView):
@@ -25,6 +26,7 @@ def review_detail(request, slug):
     review = get_object_or_404(queryset, slug=slug)
     comments = review.comments.all()
     comment_count = review.comments.filter(approved=True).count()
+    comment_form = CommentForm()
 
     return render(
         request,
@@ -32,5 +34,6 @@ def review_detail(request, slug):
         {"review": review,
          "comments": comments,
          "comment_count": comment_count,
+         "comment_form": comment_form,
          },
     )
