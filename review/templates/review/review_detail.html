@@ -14,7 +14,13 @@
                 <p class="review-by">by {{ review.author }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <img src="{% static 'images/missingboxart.png' %}" class="scale" alt="Missing Box Art">
+              {% if "missingboxart" in review.featured_image.url %}
+              <img src="{% static 'images/missingboxart.png' %}" class="scale"
+                alt="placeholder image for missing box art">
+              {% else %}
+              <img src="{{ review.featured_image.url }}" class="scale"
+                alt="{{ review.title }}">
+              {% endif %}
             </div>
         </div>
     </div>
