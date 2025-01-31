@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 let commentId = e.target.getAttribute("data-comment_id");
                 console.log(`Deleting comment with ID: ${commentId}`);
                 deleteConfirm.href = `delete_comment/${commentId}`;
+                console.log(`Set delete comment href to: ${deleteConfirm.href}`);
                 deleteCommentModal.show();
             });
         }
@@ -32,7 +33,9 @@ document.addEventListener("DOMContentLoaded", function() {
             button.addEventListener("click", (e) => {
                 let reviewSlug = e.target.getAttribute("data-review_slug");
                 console.log(`Deleting review with slug: ${reviewSlug}`);
-                document.getElementById("deleteReviewConfirm").href = `/delete/${reviewSlug}/`;
+                const deleteReviewConfirm = document.getElementById("deleteReviewConfirm");
+                deleteReviewConfirm.href = `/${reviewSlug}/delete/`;
+                console.log(`Set delete review href to: ${deleteReviewConfirm.href}`);
                 deleteReviewModal.show();
             });
         }
