@@ -1,4 +1,5 @@
 from django import forms
+from django_summernote.widgets import SummernoteWidget
 from .models import Comment, Review
 
 class CommentForm(forms.ModelForm):
@@ -18,3 +19,6 @@ class ReviewForm(forms.ModelForm):
             'platform_availability_nintendo', 'platform_availability_pc', 
             'featured_image', 'full_review',
         ]
+        widgets = {
+            'full_review': SummernoteWidget(),
+        }
