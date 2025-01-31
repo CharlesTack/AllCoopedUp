@@ -16,5 +16,5 @@ class ReviewForm(forms.ModelForm):
             'co_op_mode_couch', 'co_op_mode_online', 'pegi_rating',
             'platform_availability_xbox', 'platform_availability_playstation',
             'platform_availability_nintendo', 'platform_availability_pc', 
-            'featured_image', 'full_review',
+            'featured_image', 'full_review', 'status',
         ]

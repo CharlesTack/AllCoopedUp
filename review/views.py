@@ -137,6 +137,7 @@ def submit_review(request):
         if form.is_valid():
             review = form.save(commit=False)
             review.author = request.user
+            review.status = 0 # 0 means the review is draft as default
             review.save()
             messages.success(request, 'Many thanks! Your review has been submitted and is pending approval.')
             return redirect('home')  # this is the page where the user will be redirected to after successfully submitting a review
