@@ -1,3 +1,4 @@
+import logging
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic
 from django.contrib.auth.decorators import login_required
@@ -6,6 +7,8 @@ from django.http import HttpResponseRedirect
 from django.utils.text import slugify
 from .models import Review, Comment
 from .forms import CommentForm, ReviewForm
+
+logger = logging.getLogger(__name__)
 
 # Create your views here.
 class ReviewList(generic.ListView):
@@ -58,6 +61,7 @@ def edit_review(request, slug):
 
 @login_required
 def delete_review(request, slug):
+    logger.info(f"Received request to delete review with slug: {slug}")
     review = get_object_or_404(Review, slug=slug, author=request.user)
     review.delete()
     messages.success(request, 'Your review has been deleted.')
@@ -98,6 +102,7 @@ def comment_edit(request, slug, comment_id):
     return HttpResponseRedirect(reverse('review_detail', args=[slug]))
 
 def comment_delete(request, slug, comment_id):
+    logger.info(f"Received request to delete comment with ID: {comment_id} for review with slug: {slug}")
     queryset = Review.objects.filter(status=1)
     review = get_object_or_404(queryset, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)

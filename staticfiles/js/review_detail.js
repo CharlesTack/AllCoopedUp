@@ -9,16 +9,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (deleteCommentModalElement) {
         const deleteCommentModal = new bootstrap.Modal(deleteCommentModalElement);
-        const deleteButtons = document.getElementsByClassName("btn-delete");
+        const deleteCommentButtons = document.querySelectorAll(".btn-delete[data-bs-target='#deleteCommentModal']");
         const deleteConfirm = document.getElementById("deleteCommentConfirm");
 
         // Delete comment functionality
-        for (let button of deleteButtons) {
+        for (let button of deleteCommentButtons) {
             button.addEventListener("click", (e) => {
                 let commentId = e.target.getAttribute("data-comment_id");
                 console.log(`Deleting comment with ID: ${commentId}`);
-                deleteConfirm.href = `delete_comment/${commentId}`;
-                console.log(`Set delete comment href to: ${deleteConfirm.href}`);
+                if (commentId) {
+                    deleteConfirm.href = `delete_comment/${commentId}/`;
+                    console.log(`Set delete comment href to: ${deleteConfirm.href}`);
+                } else {
+                    console.error("Comment ID is null or undefined");
+                }
                 deleteCommentModal.show();
             });
         }
@@ -33,9 +37,13 @@ document.addEventListener("DOMContentLoaded", function() {
             button.addEventListener("click", (e) => {
                 let reviewSlug = e.target.getAttribute("data-review_slug");
                 console.log(`Deleting review with slug: ${reviewSlug}`);
-                const deleteReviewConfirm = document.getElementById("deleteReviewConfirm");
-                deleteReviewConfirm.href = `/${reviewSlug}/delete/`;
-                console.log(`Set delete review href to: ${deleteReviewConfirm.href}`);
+                if (reviewSlug) {
+                    const deleteReviewConfirm = document.getElementById("deleteReviewConfirm");
+                    deleteReviewConfirm.href = `/${reviewSlug}/delete/`;
+                    console.log(`Set delete review href to: ${deleteReviewConfirm.href}`);
+                } else {
+                    console.error("Review slug is null or undefined");
+                }
                 deleteReviewModal.show();
             });
         }
@@ -48,9 +56,15 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", (e) => {
             let commentId = e.target.getAttribute("data-comment_id");
             let commentContent = document.getElementById(`comment${commentId}`).innerText;
-            commentText.value = commentContent;
-            submitButton.innerText = "Update";
-            commentForm.setAttribute("action", `edit_comment/${commentId}`);
+            console.log(`Editing comment with ID: ${commentId}, Content: ${commentContent}`);
+            if (commentId) {
+                commentText.value = commentContent;
+                submitButton.innerText = "Update";
+                commentForm.setAttribute("action", `edit_comment/${commentId}/`);
+                console.log(`Set form action to: edit_comment/${commentId}/`);
+            } else {
+                console.error("Comment ID is null or undefined");
+            }
         });
     }
 });
