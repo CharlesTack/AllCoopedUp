@@ -134,7 +134,7 @@ def comment_delete(request, slug, comment_id):
 @login_required
 def submit_review(request):
     if request.method == 'POST':
-        form = ReviewForm(request.POST)
+        form = ReviewForm(request.POST, request.FILES) # Include request.FILES to handle file uploads
         if form.is_valid():
             review = form.save(commit=False)
             review.author = request.user
