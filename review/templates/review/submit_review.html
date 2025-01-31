@@ -5,11 +5,11 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-12 col-md-8">
-      <h2>Submit a Review</h2>
+      <h2>{% if form.instance.pk %}Edit Review{% else %}Submit a Review{% endif %}</h2>
       <form method="post" enctype="multipart/form-data"> <!-- Add enctype="multipart/form-data" -->
         {% csrf_token %}
         {{ form|crispy }}
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">{% if form.instance.pk %}Update{% else %}Submit{% endif %}</button>
       </form>
     </div>
   </div>
