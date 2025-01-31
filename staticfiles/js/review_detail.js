@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let button of deleteButtons) {
         button.addEventListener("click", (e) => {
             let commentId = e.target.getAttribute("data-comment_id");
+            console.log(`Deleting comment with ID: ${commentId}`);
             deleteConfirm.href = `delete_comment/${commentId}`;
             deleteModal.show();
         });
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let button of deleteReviewButtons) {
         button.addEventListener("click", (e) => {
             let reviewSlug = e.target.getAttribute("data-review_slug");
+            console.log(`Deleting review with slug: ${reviewSlug}`);
             document.getElementById("deleteReviewConfirm").href = `/delete/${reviewSlug}/`;
         });
     }
