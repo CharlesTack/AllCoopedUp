@@ -146,3 +146,25 @@ def submit_review(request):
     else:
         form = ReviewForm()
     return render(request, 'review/submit_review.html', {'form': form})
+
+@login_required
+def edit_review(request, slug):
+    review = get_object_or_404(Review, slug=slug, author=request.user)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, request.FILES, instance=review)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.status = 0  # Set the status to draft (0) or pending approval
+            review.save()
+            messages.success(request, 'Your review has been updated and is pending approval.')
+            return redirect('home')
+    else:
+        form = ReviewForm(instance=review)
+    return render(request, 'review/submit_review.html', {'form': form})
+
+@login_required
+def delete_review(request, slug):
+    review = get_object_or_404(Review, slug=slug, author=request.user)
+    review.delete()
+    messages.success(request, 'Your review has been deleted.')
+    return redirect('home')
