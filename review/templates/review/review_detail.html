@@ -38,7 +38,7 @@
         </article>
         {% if user == review.author %}
         <a href="{% url 'edit_review' review.slug %}" class="btn btn-primary mt-3">Edit</a>
-        <button class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#deleteReviewModal">Delete</button>
+        <button class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#deleteReviewModal" data-review_slug="{{ review.slug }}">Delete</button>
         {% endif %}
       </div>
     </div>
