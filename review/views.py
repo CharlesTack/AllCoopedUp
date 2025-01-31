@@ -1,9 +1,10 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Review, Comment
-from .forms import CommentForm
+from .forms import CommentForm, ReviewForm
 
 # Create your views here.
 class ReviewList(generic.ListView):
@@ -128,3 +129,17 @@ def comment_delete(request, slug, comment_id):
                              'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('review_detail', args=[slug]))
+
+@login_required
+def submit_review(request):
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.author = request.user
+            review.save()
+            messages.success(request, 'Many thanks! Your review has been submitted and is pending approval.')
+            return redirect('home')  # this is the page where the user will be redirected to after successfully submitting a review
+    else:
+        form = ReviewForm()
+    return render(request, 'review/submit_review.html', {'form': form})
