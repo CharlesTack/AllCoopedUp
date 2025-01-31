@@ -3,6 +3,7 @@ from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.utils.text import slugify
 from .models import Review, Comment
 from .forms import CommentForm, ReviewForm
 
@@ -138,6 +139,7 @@ def submit_review(request):
             review = form.save(commit=False)
             review.author = request.user
             review.status = 0 # 0 means the review is draft as default
+            review.slug = slugify(review.game_title)  # Generate slug from game title
             review.save()
             messages.success(request, 'Many thanks! Your review has been submitted and is pending approval.')
             return redirect('home')  # this is the page where the user will be redirected to after successfully submitting a review
