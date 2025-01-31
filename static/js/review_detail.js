@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (deleteReviewModalElement) {
         const deleteReviewModal = new bootstrap.Modal(deleteReviewModalElement);
-        const deleteReviewButtons = document.querySelectorAll(".btn-danger[data-bs-target='#deleteReviewModal']");
+        const deleteReviewButtons = document.querySelectorAll(".btn-delete[data-bs-target='#deleteReviewModal']");
         for (let button of deleteReviewButtons) {
             button.addEventListener("click", (e) => {
                 let reviewSlug = e.target.getAttribute("data-review_slug");

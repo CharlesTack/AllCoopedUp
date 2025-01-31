@@ -37,8 +37,8 @@
                     {{ review.full_review | safe }}
                 </article>
                 {% if user == review.author %}
-                <a href="{% url 'edit_review' review.slug %}" class="btn btn-primary mt-3">Edit</a>
-                <button class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#deleteReviewModal" data-review_slug="{{ review.slug }}">Delete</button>
+                <a href="{% url 'edit_review' review.slug %}" class="btn btn-edit mt-3">Edit</a>
+                <button class="btn btn-delete mt-3" data-bs-toggle="modal" data-bs-target="#deleteReviewModal" data-review_slug="{{ review.slug }}">Delete</button>
                 {% endif %}
             </div>
         </div>
@@ -77,8 +77,8 @@
                     </p>
                     {% endif %}
                     {% if user.is_authenticated and comment.author == user %}
-                    <button class="btn btn-delete" data-comment_id="{{ comment.id }}" data-bs-toggle="modal" data-bs-target="#deleteCommentModal">Delete</button>
                     <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
+                    <button class="btn btn-delete" data-comment_id="{{ comment.id }}" data-bs-toggle="modal" data-bs-target="#deleteCommentModal">Delete</button>
                     {% endif %}
                 </div>
                 <!-- Our for loop ends here -->
