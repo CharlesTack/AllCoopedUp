@@ -4,149 +4,142 @@
 {% load crispy_forms_tags %}
 
 <div class="masthead">
-  <div class="container">
-    <div class="row g-0">
-      <div class="col-md-6 masthead-text">
-        <!-- Game title goes in these h1 tags -->
-        <h1 class="review-title">{{ review.game_title }}</h1>
-        <!-- Review title goes in these p tags-->
-        <p class="review-subtitle">{{ review.review_title }}</p>
-        <!-- Review author goes in these p tags -->
-        <p class="review-by">by {{ review.author }}</p>
-      </div>
-      <div class="d-none d-md-block col-md-6 masthead-image">
-        {% if "missingboxart" in review.featured_image.url %}
-        <img src="{% static 'images/missingboxart.png' %}" class="scale"
-          alt="placeholder image for missing box art">
-        {% else %}
-        <img src="{{ review.featured_image.url }}" class="scale"
-          alt="{{ review.title }}">
-        {% endif %}
-      </div>
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-6 masthead-text">
+                <!-- Game title goes in these h1 tags -->
+                <h1 class="review-title">{{ review.game_title }}</h1>
+                <!-- Review title goes in these p tags-->
+                <p class="review-subtitle">{{ review.review_title }}</p>
+                <!-- Review author goes in these p tags -->
+                <p class="review-by">by {{ review.author }}</p>
+            </div>
+            <div class="d-none d-md-block col-md-6 masthead-image">
+              {% if "missingboxart" in review.featured_image.url %}
+              <img src="{% static 'images/missingboxart.png' %}" class="scale"
+                alt="placeholder image for missing box art">
+              {% else %}
+              <img src="{{ review.featured_image.url }}" class="scale"
+                alt="{{ review.title }}">
+              {% endif %}
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <div class="container">
-  <div class="row">
-    <div class="col card mb-4  mt-3 left  top">
-      <div class="card-body">
-        <!-- The review content goes inside the card-text. -->
-        <!-- Use the | safe filter inside the template tags -->
-        <article class="card-text">
-            {{ review.full_review | safe }}
-        </article>
-        {% if user == review.author %}
-        <a href="{% url 'edit_review' review.slug %}" class="btn btn-primary mt-3">Edit</a>
-        <button class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#deleteReviewModal" data-review_slug="{{ review.slug }}">Delete</button>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-  <!-- Displaying count of comments -->
-  <div class="row">
-    <div class="col-12">
-      <strong class="text-secondary">
-        <i class="far fa-comments"></i> {{ comment_count }}
-      </strong>
-    </div>
-    <div class="col-12">
-      <hr>
-    </div>
-  </div>
-  <!-- Displaying Comments -->
-  <div class="row">
-    <div class="col-md-8 card mb-4  mt-3 ">
-      <h3>Comments:</h3>
-      <div class="card-body">
-        <!-- We want a for loop inside the empty control tags
-          to iterate through each comment in comments -->
-        {% for comment in comments %}
-        <div class="p-2 comments
-          {% if not comment.approved and comment.author == user %}
-          faded{% elif not comment.approved %} d-none{% endif %}">
-          <p class="font-weight-bold">
-            {{ comment.author }} wrote:
-          </p>
-          <div id="comment{{ comment.id }}">
-            {{ comment.comment | linebreaks }}
-          </div>
-          {% if not comment.approved and comment.author == user %}
-          <p class="approval">
-            This comment is awaiting approval
-          </p>
-          {% endif %}
-          {% if user.is_authenticated and comment.author == user %}
-          <button class="btn btn-delete" data-comment_id="{{ comment.id }}" data-bs-toggle="modal" data-bs-target="#deleteCommentModal">Delete</button>
-          <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
-          {% endif %}
+    <div class="row">
+        <div class="col card mb-4 mt-3 left top">
+            <div class="card-body">
+                <!-- The review content goes inside the card-text. -->
+                <!-- Use the | safe filter inside the template tags -->
+                <article class="card-text">
+                    {{ review.full_review | safe }}
+                </article>
+                {% if user == review.author %}
+                <a href="{% url 'edit_review' review.slug %}" class="btn btn-primary mt-3">Edit</a>
+                <button class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#deleteReviewModal" data-review_slug="{{ review.slug }}">Delete</button>
+                {% endif %}
+            </div>
         </div>
-        <!-- Our for loop ends here -->
-        {% endfor %}
-      </div>
     </div>
-    <!-- Creating New Comments -->
-    <div class="col-md-4 card mb-4 mt-3">
-      <div class="card-body">
-        {% if user.is_authenticated %}
-        <h3>Leave a comment:</h3>
-        <p>Commenting as: {{ user.username }}</p>
-        <form id="commentForm" method="post"
-          style="margin-top: 1.3em;">
-          {{ comment_form | crispy }}
-          {% csrf_token %}
-          <button id="submitButton" type="submit"
-            class="btn btn-signup btn-lg">Submit</button>
-        </form>
-        {% else %}
-        <p>Log in to leave a comment</p>
-        {% endif %}
-      </div>
+    <!-- Displaying count of comments -->
+    <div class="row">
+        <div class="col-12">
+            <strong class="text-secondary">
+                <i class="far fa-comments"></i> {{ comment_count }}
+            </strong>
+        </div>
+        <div class="col-12">
+            <hr>
+        </div>
     </div>
-  </div>
+    <!-- Displaying Comments -->
+    <div class="row">
+        <div class="col-md-8 card mb-4 mt-3">
+            <h3>Comments:</h3>
+            <div class="card-body">
+                <!-- We want a for loop inside the empty control tags
+                to iterate through each comment in comments -->
+                {% for comment in comments %}
+                <div class="p-2 comments
+                    {% if not comment.approved and comment.author == user %}
+                    faded{% elif not comment.approved %} d-none{% endif %}">
+                    <p class="font-weight-bold">
+                        {{ comment.author }} wrote:
+                    </p>
+                    <div id="comment{{ comment.id }}">
+                        {{ comment.comment | linebreaks }}
+                    </div>
+                    {% if not comment.approved and comment.author == user %}
+                    <p class="approval">
+                        This comment is awaiting approval
+                    </p>
+                    {% endif %}
+                    {% if user.is_authenticated and comment.author == user %}
+                    <button class="btn btn-delete" data-comment_id="{{ comment.id }}" data-bs-toggle="modal" data-bs-target="#deleteCommentModal">Delete</button>
+                    <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
+                    {% endif %}
+                </div>
+                <!-- Our for loop ends here -->
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Creating New Comments -->
+        <div class="col-md-4 card mb-4 mt-3">
+            <div class="card-body">
+                {% if user.is_authenticated %}
+                <h3>Leave a comment:</h3>
+                <p>Commenting as: {{ user.username }}</p>
+                <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% else %}
+                <p>Log in to leave a comment</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Delete Review confirmation modal -->
 <div class="modal fade" id="deleteReviewModal" tabindex="-1" aria-labelledby="deleteReviewModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="deleteReviewModalLabel">Delete review?</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              Are you sure you want to delete your review? This action cannot be undone.
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <a id="deleteReviewConfirm" href="#" class="btn btn-danger">Delete</a>
-          </div>
-      </div>
-  </div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteReviewModalLabel">Delete review?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete your review? This action cannot be undone.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a id="deleteReviewConfirm" href="#" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
 </div>
 
-<!-- Delete confirmation modal -->
+<!-- Delete Comment confirmation modal -->
 <div class="modal fade" id="deleteCommentModal" tabindex="-1" aria-labelledby="deleteCommentModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title"
-          id="deleteCommentModalLabel">Delete comment?</h5>
-        <button type="button" class="btn-close"
-          data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Are you sure you want to delete your comment?
-        This action cannot be undone.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary"
-          data-bs-dismiss="modal">Close</button>
-        <a id="deleteCommentConfirm" href="#" class="btn
-          btn-danger">Delete</a>
-      </div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteCommentModalLabel">Delete comment?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete your comment? This action cannot be undone.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a id="deleteCommentConfirm" href="#" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 {% endblock content %}
