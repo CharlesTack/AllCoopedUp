@@ -1,9 +1,17 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
 {% block content %}
-  <h2>Submit a Review</h2>
-  <form method="post" enctype="multipart/form-data"> <!-- Add enctype="multipart/form-data" -->
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+      <h2>Submit a Review</h2>
+      <form method="post" enctype="multipart/form-data"> <!-- Add enctype="multipart/form-data" -->
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
 {% endblock %}
