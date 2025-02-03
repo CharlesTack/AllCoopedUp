@@ -25,13 +25,7 @@
             
             {% if query %}
                 <h2 class="mt-4">Search results for "{{ query }}"</h2>
-                {% if review_list %}
-                    <ul>
-                        {% for review in review_list %}
-                            <li><a href="{{ review.get_absolute_url }}">{{ review.game_title }}</a></li>
-                        {% endfor %}
-                    </ul>
-                {% else %}
+                {% if not review_list %}
                     <p class="alert alert-warning text-center">
                         No games matching your search were found. Feel free to 
                         <a href="{% url 'submit_review' %}" class="alert-link">submit your own review</a>!
@@ -39,6 +33,7 @@
                 {% endif %}
             {% endif %}
         </div>
+
         <!-- Game Filters -->
 
         <!-- Review Cards Section -->
