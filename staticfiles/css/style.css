@@ -22,18 +22,6 @@ body {
     background-color: var(--background-color);
 }
 
-/* Style for welcome message links */
-.welcome-link {
-    color: var(--primary-color) !important;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-/* Style for "Forgot your password?" link */
-.helptext a {
-    color: var(--primary-color) !important;
-}
-
 .thin {
     font-weight: 300;
 }
@@ -189,6 +177,25 @@ body {
 
 .approval {
     color: var(--highlight-color-light);
+}
+
+/* used important tags to fix issues below */
+
+/* Style for welcome message links */
+.welcome-link {
+    color: var(--primary-color) !important;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Style for "Forgot your password?" link */
+.helptext a {
+    color: var(--primary-color) !important;
+}
+
+/* Style for dropdown menu text */
+select, select option {
+    color: black !important;
 }
 
 /* Added below and marked as important to overwrite inline styling being forced by Summernote */

@@ -31,7 +31,7 @@ class ReviewList(generic.ListView):
         return context
 
     def get_queryset(self):
-        queryset = super().get_queryset()
+        queryset = super().get_queryset().order_by('game_title')
         query = self.request.GET.get("query", None)
         if query:
             queryset = queryset.filter(game_title__icontains=query)
