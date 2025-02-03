@@ -22,3 +22,6 @@ class ReviewForm(forms.ModelForm):
         widgets = {
             'full_review': SummernoteWidget(),
         }
+
+class SearchForm(forms.Form):
+    query = forms.CharField(max_length=200, required=False, label='Search for a game')

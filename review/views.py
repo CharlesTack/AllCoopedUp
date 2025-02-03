@@ -6,15 +6,37 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.utils.text import slugify
 from .models import Review, Comment
-from .forms import CommentForm, ReviewForm
+from .forms import CommentForm, ReviewForm, SearchForm
 
 logger = logging.getLogger(__name__)
 
 # Create your views here.
 class ReviewList(generic.ListView):
-    queryset = Review.objects.filter(status=1).order_by("game_title")
+    model = Review
     template_name = "review/index.html"
+    context_object_name = "review_list"
     paginate_by = 6
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        query = self.request.GET.get("query", "")
+        form = SearchForm(self.request.GET)
+        results = context["review_list"]
+
+        # Add extra context for search feedback
+        context["form"] = form
+        context["query"] = query
+        context["no_results"] = query and not results  # True if search performed but no results
+
+        return context
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        query = self.request.GET.get("query", None)
+        if query:
+            queryset = queryset.filter(game_title__icontains=query)
+        return queryset
+
 
 def review_detail(request, slug):
     queryset = Review.objects.filter(status=1)

@@ -22,6 +22,18 @@ body {
     background-color: var(--background-color);
 }
 
+/* Style for welcome message links */
+.welcome-link {
+    color: var(--primary-color) !important;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Style for "Forgot your password?" link */
+.helptext a {
+    color: var(--primary-color) !important;
+}
+
 .thin {
     font-weight: 300;
 }

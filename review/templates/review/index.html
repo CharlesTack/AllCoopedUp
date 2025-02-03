@@ -9,8 +9,37 @@
         <div class="col-12 mt-3 text-center">
             <h1>Welcome to All Cooped Up!</h1>
             <p>This site is for reviews of co-operatively played games, or co-ops for short.</p>
-            <p>Please feel free to register so that you can log in and submit your own reviews to contribute to the community.</p>
+            <p>Please feel free to <a href="{% url 'account_signup' %}" class="fw-bold text-decoration-underline welcome-link">register</a> so that you can <a href="{% url 'account_login' %}" class="fw-bold text-decoration-underline welcome-link">log in</a> and <a href="{% url 'submit_review' %}" class="fw-bold text-decoration-underline welcome-link">submit</a> your own reviews to contribute to the community.</p>
         </div>
+        
+        <!-- Search function -->
+        <div class="col-12 mt-3 text-center">
+            <form class="row justify-content-center" method="GET" action="{% url 'home' %}">
+                <div class="col-md-4">
+                    <input class="form-control" type="search" name="query" placeholder="Search" aria-label="Search" value="{{ query }}">
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+            </form>
+            
+            {% if query %}
+                <h2 class="mt-4">Search results for "{{ query }}"</h2>
+                {% if review_list %}
+                    <ul>
+                        {% for review in review_list %}
+                            <li><a href="{{ review.get_absolute_url }}">{{ review.game_title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="alert alert-warning text-center">
+                        No games matching your search were found. Feel free to 
+                        <a href="{% url 'submit_review' %}" class="alert-link">submit your own review</a>!
+                    </p>
+                {% endif %}
+            {% endif %}
+        </div>
+        <!-- Game Filters -->
 
         <!-- Review Cards Section -->
         <div class="col-12 mt-3 left">
