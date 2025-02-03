@@ -1,5 +1,25 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* Light CSS Variables */
+:root {
+    --primary-font: "Ubuntu Sans", serif;
+    --secondary-font: "Lato", sans-serif;
+    --background-color: #2B2D42; /*dark blue - Space cadet*/
+    --primary-color: #FFFFFF; /* white used for text on darker colours*/
+    --secondary-color: #2E86AB; /* bright blue - Blue(NCS)*/
+    --tertiary-color: #8E7C93; /* dark blush - Mountbatten pink*/
+    --highlight-color: #D81E5B; /* Bright Pink - Raspberry*/
+    --highlight-color-light: #F093B2; /* Light Pink - Amaranth pink*/ 
+}
+
+* {
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+}
+
 body {
-    background-color: #F9FAFC;
+    background-color: var(--background-color);
 }
 
 .brand {
@@ -22,11 +42,10 @@ body {
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: var(--tertiary-color);
 }
-
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: var(--background-color);
 }
 
 .card {
@@ -43,7 +62,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #188181;
+    background-color: var(--secondary-color);
 }
 
 .scale {
@@ -54,7 +73,7 @@ body {
 .author {
     color: white;
     margin: 4px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .masthead {
@@ -67,7 +86,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: var(--secondary-color);
     color: white;
     position: relative;
 }
@@ -84,7 +103,7 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: var(--secondary-color);
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -129,6 +148,11 @@ body {
     color: #23BBBB;
 }
 
+.page-link {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
 .link {
     color: #23BBBB;
     text-decoration: none;
@@ -163,5 +187,5 @@ body {
 }
 
 .approval {
-    color: rgb(222, 146, 168);
+    color: var(--highlight-color-light);
 }
