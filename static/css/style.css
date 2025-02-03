@@ -189,3 +189,14 @@ body {
 .approval {
     color: var(--highlight-color-light);
 }
+
+/* Added below and marked as important to overwrite inline styling being forced by Summernote */
+.about-content p {
+    color: var(--primary-color) !important;
+    background-color: var(--background-color) !important;
+}
+
+.about-content h3 {
+    color: var(--primary-color) !important;
+    background-color: var(--background-color) !important;
+}
