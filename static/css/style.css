@@ -7,8 +7,8 @@
     --secondary-font: "Lato", sans-serif;
     --background-color: #2B2D42; /*dark blue - Space cadet*/
     --primary-color: #FFFFFF; /* white used for text on darker colours*/
-    --secondary-color: #2E86AB; /* bright blue - Blue(NCS)*/
-    --tertiary-color: #8E7C93; /* dark blush - Mountbatten pink*/
+    --secondary-color: #2C7DA5; /* bright blue - Blue(NCS)*/
+    --tertiary-color: #847089; /* dark blush - Mountbatten pink*/
     --highlight-color: #D81E5B; /* Bright Pink - Raspberry*/
     --highlight-color-light: #F093B2; /* Light Pink - Amaranth pink*/ 
 }
@@ -20,17 +20,6 @@
 
 body {
     background-color: var(--background-color);
-}
-
-.brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
-}
-
-.red-o {
-    color: #E84610;
 }
 
 .thin {
@@ -117,7 +106,7 @@ body {
 
 .review-link:hover,
 .review-link {
-    color: #E84610;
+    color: #C73200;
 }
 
 .review-title {
@@ -127,13 +116,13 @@ body {
 
 .review-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: var(--primary-color);
     font-style: italic;
 }
 
 .review-by {
     margin-left: 5%;
-    color: lightgray;
+    color: var(--primary-color);
 }
 
 .btn-signup,
@@ -165,19 +154,19 @@ body {
 }
 
 .btn-like {
-    color: #E84610;
+    color: #C73200;
     border: none;
     background: transparent;
 }
 
 .btn-delete {
     color: #fff;
-    background: #E84610;
+    background: #C73200;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: #C73200;
     background: transparent;
     border: none;
 }
@@ -201,4 +190,8 @@ body {
     color: var(--primary-color) !important;
     background-color: var(--background-color) !important;
     font-family: var(--primary-font) !important;
+}
+
+.force-white {
+    color: var(--primary-color) !important;
 }
