@@ -61,8 +61,42 @@
                                 <h2 class="card-title">{{ review.game_title }}</h2>
                             </a>
                             <hr />
-                            <p class="card-text">{{ review.index_excerpt}}
-                            </p>
+                            <p class="card-text">{{ review.index_excerpt}}</p>
+                            <!-- Add icons/text for aspects in a 2x2 grid -->
+                            <div class="row">
+                                <div class="col-6">
+                                    <p>Star Rating: {{ review.get_star_rating_display }}</p>
+                                </div>
+                                <div class="col-6">
+                                    <p>Co-op Mode: 
+                                        {% if review.co_op_mode_couch %}
+                                            <i class="fa-solid fa-couch"></i>
+                                        {% endif %}
+                                        {% if review.co_op_mode_online %}
+                                            <i class="fa-solid fa-globe"></i>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                                <div class="col-6">
+                                    <p>PEGI Rating: <span class="pegi-rating">{{ review.get_pegi_rating_display }}</span></p>
+                                </div>
+                                <div class="col-6">
+                                    <p>Platforms: 
+                                        {% if review.platform_availability_xbox %}
+                                            <i class="fa-brands fa-xbox"></i>
+                                        {% endif %}
+                                        {% if review.platform_availability_playstation %}
+                                            <i class="fa-brands fa-playstation"></i>
+                                        {% endif %}
+                                        {% if review.platform_availability_nintendo %}
+                                            <i class="fa-solid fa-n"></i>
+                                        {% endif %}
+                                        {% if review.platform_availability_pc %}
+                                            <i class="fa-solid fa-desktop"></i>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
