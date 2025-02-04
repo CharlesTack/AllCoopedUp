@@ -9,9 +9,17 @@
       <form method="post" enctype="multipart/form-data"> <!-- Add enctype="multipart/form-data" -->
         {% csrf_token %}
         {{ form|crispy }}
-        <button type="submit" class="mb-4 btn btn-primary">{% if form.instance.pk %}Update{% else %}Submit{% endif %}</button>
+        <button type="submit" class="mb-4 btn btn-signup">{% if form.instance.pk %}Update{% else %}Submit{% endif %}</button>
       </form>
     </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div id="image-copyright-message" class="col-12 col-md-6">
+    <h3><i>A note to users about image copyright</i></h3>
+    <p>Please ensure that box at images are sourced from <a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a> (whose approach to copyright can be found via an example <a href="https://en.wikipedia.org/wiki/File:Minecraft_2024_cover_art.png" target="_blank">here</a>) or another source of copyright free images</p>
+    <p>The site owners are not liable for any image copyright infringements for images uploaded by users.</p>
+    <p>Many thanks!</p>
   </div>
 </div>
 {% endblock %}
