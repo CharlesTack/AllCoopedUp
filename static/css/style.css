@@ -80,19 +80,36 @@ body {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
     width: 100%;
+    padding: 0; /* Remove any padding */
 }
 
 .masthead-text {
     background-color: var(--secondary-color);
     color: white;
     position: relative;
+    padding: 20px; /* Adjust padding as needed */
+    height: 100%; /* Ensure the text section takes up the full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .masthead-image {
     position: relative;
     overflow: hidden;
+    display: block; /* Ensure the image section is displayed */
+}
+
+.masthead-image img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover; /* Ensure the image covers the entire area */
 }
 
 .masthead-image:after {
@@ -106,7 +123,7 @@ body {
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
-    z-index: 100;
+    display: block; /* Ensure the after section is displayed */
 }
 
 .review-link {
