@@ -41,7 +41,14 @@ class ReviewList(generic.ListView):
         if query:
             queryset = queryset.filter(game_title__icontains=query)
         if platform:
-            queryset = queryset.filter(platform_reviewed_on=platform)
+            if platform == 'xbox':
+                queryset = queryset.filter(platform_availability_xbox=True)
+            elif platform == 'playstation':
+                queryset = queryset.filter(platform_availability_playstation=True)
+            elif platform == 'nintendo':
+                queryset = queryset.filter(platform_availability_nintendo=True)
+            elif platform == 'pc':
+                queryset = queryset.filter(platform_availability_pc=True)
         if pegi_rating:
             queryset = queryset.filter(pegi_rating=pegi_rating)
         if co_op_mode_couch:
