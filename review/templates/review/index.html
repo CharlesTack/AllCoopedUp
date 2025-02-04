@@ -15,10 +15,10 @@
         <!-- Search function -->
         <div class="col-12 mt-3 text-center">
             <form class="row justify-content-center" method="GET" action="{% url 'home' %}">
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-8 col-10 mb-2">
                     <input class="form-control" type="search" name="query" placeholder="Search" aria-label="Search" value="{{ query }}">
                 </div>
-                <div class="col-auto">
+                <div class="col-auto mb-2">
                     <button class="btn btn-signup" type="submit">Search</button>
                 </div>
             </form>
@@ -37,7 +37,7 @@
         <!-- Game Filters -->
         <div class="col-12 mt-3 text-center">
             <form class="row justify-content-center" method="GET" action="{% url 'home' %}">
-                <div class="col-md-2">
+                <div class="col-md-3 col-sm-6 col-10 mb-2">
                     <select class="form-control" name="platform">
                         <option value="">All Platforms</option>
                         {% for value, label in form.platform.field.choices %}
@@ -45,7 +45,7 @@
                         {% endfor %}
                     </select>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 col-sm-6 col-10 mb-2">
                     <select class="form-control" name="pegi_rating">
                         <option value="">All PEGI Ratings</option>
                         {% for value, label in form.pegi_rating.field.choices %}
@@ -53,22 +53,24 @@
                         {% endfor %}
                     </select>
                 </div>
-                <div class="col-md-2">
-                    <div class="form-check">
+                <div class="w-100"></div> <!-- Force a new row -->
+                <div class="col-md-3 col-sm-6 col-10 mb-2">
+                    <div class="form-check d-flex align-items-center">
                         <input class="form-check-input" type="checkbox" name="co_op_mode_couch" id="co_op_mode_couch" {% if form.co_op_mode_couch.value %}checked{% endif %}>
                         <label class="form-check-label" for="co_op_mode_couch">Co-op Mode Couch</label>
                     </div>
                 </div>
-                <div class="col-md-2">
-                    <div class="form-check">
+                <div class="col-md-3 col-sm-6 col-10 mb-2">
+                    <div class="form-check d-flex align-items-center">
                         <input class="form-check-input" type="checkbox" name="co_op_mode_online" id="co_op_mode_online" {% if form.co_op_mode_online.value %}checked{% endif %}>
                         <label class="form-check-label" for="co_op_mode_online">Co-op Mode Online</label>
                     </div>
                 </div>
-                <div class="col-auto">
+                <div class="w-100"></div> <!-- Force a new row -->
+                <div class="col-auto mb-2">
                     <button class="btn btn-signup" type="submit">Filter</button>
                 </div>
-                <div class="col-auto">
+                <div class="col-auto mb-2">
                     <a href="{% url 'home' %}" class="btn btn-delete">Clear Filters</a>
                 </div>
             </form>
