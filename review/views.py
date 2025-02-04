@@ -33,8 +33,22 @@ class ReviewList(generic.ListView):
     def get_queryset(self):
         queryset = super().get_queryset().order_by('game_title')
         query = self.request.GET.get("query", None)
+        platform = self.request.GET.get("platform", None)
+        pegi_rating = self.request.GET.get("pegi_rating", None)
+        co_op_mode_couch = self.request.GET.get("co_op_mode_couch", None)
+        co_op_mode_online = self.request.GET.get("co_op_mode_online", None)
+
         if query:
             queryset = queryset.filter(game_title__icontains=query)
+        if platform:
+            queryset = queryset.filter(platform_reviewed_on=platform)
+        if pegi_rating:
+            queryset = queryset.filter(pegi_rating=pegi_rating)
+        if co_op_mode_couch:
+            queryset = queryset.filter(co_op_mode_couch=True)
+        if co_op_mode_online:
+            queryset = queryset.filter(co_op_mode_online=True)
+
         return queryset
 
 

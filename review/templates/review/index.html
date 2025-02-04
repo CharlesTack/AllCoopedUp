@@ -19,7 +19,7 @@
                     <input class="form-control" type="search" name="query" placeholder="Search" aria-label="Search" value="{{ query }}">
                 </div>
                 <div class="col-auto">
-                    <button class="btn btn-primary" type="submit">Search</button>
+                    <button class="btn btn-signup" type="submit">Search</button>
                 </div>
             </form>
             
@@ -35,6 +35,44 @@
         </div>
 
         <!-- Game Filters -->
+        <div class="col-12 mt-3 text-center">
+            <form class="row justify-content-center" method="GET" action="{% url 'home' %}">
+                <div class="col-md-2">
+                    <select class="form-control" name="platform">
+                        <option value="">All Platforms</option>
+                        {% for value, label in form.platform.field.choices %}
+                            <option value="{{ value }}" {% if form.platform.value == value %}selected{% endif %}>{{ label }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select class="form-control" name="pegi_rating">
+                        <option value="">All PEGI Ratings</option>
+                        {% for value, label in form.pegi_rating.field.choices %}
+                            <option value="{{ value }}" {% if form.pegi_rating.value == value %}selected{% endif %}>{{ label }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="co_op_mode_couch" id="co_op_mode_couch" {% if form.co_op_mode_couch.value %}checked{% endif %}>
+                        <label class="form-check-label" for="co_op_mode_couch">Co-op Mode Couch</label>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="co_op_mode_online" id="co_op_mode_online" {% if form.co_op_mode_online.value %}checked{% endif %}>
+                        <label class="form-check-label" for="co_op_mode_online">Co-op Mode Online</label>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-signup" type="submit">Filter</button>
+                </div>
+                <div class="col-auto">
+                    <a href="{% url 'home' %}" class="btn btn-delete">Clear Filters</a>
+                </div>
+            </form>
+        </div>
 
         <!-- Review Cards Section -->
         <div class="col-12 mt-3 left">
