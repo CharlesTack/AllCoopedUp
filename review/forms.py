@@ -2,6 +2,7 @@ from django import forms
 from django_summernote.widgets import SummernoteWidget
 from .models import Comment, Review, RATING, PEGI
 
+
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
@@ -12,11 +13,11 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
         fields = [
-            'game_title', 'review_title', 'platform_reviewed_on', 
+            'game_title', 'review_title', 'platform_reviewed_on',
             'index_excerpt', 'star_rating',
             'co_op_mode_couch', 'co_op_mode_online', 'pegi_rating',
             'platform_availability_xbox', 'platform_availability_playstation',
-            'platform_availability_nintendo', 'platform_availability_pc', 
+            'platform_availability_nintendo', 'platform_availability_pc',
             'featured_image', 'full_review',
         ]
         labels = {
@@ -26,9 +27,12 @@ class ReviewForm(forms.ModelForm):
         }
         widgets = {
             'full_review': SummernoteWidget(),
-            'star_rating': forms.Select(choices=[('', 'Select a rating')] + list(RATING)),
-            'pegi_rating': forms.Select(choices=[('', 'Select a PEGI rating')] + list(PEGI)),
+            'star_rating': forms.Select(
+                choices=[('', 'Select a rating')] + list(RATING)),
+            'pegi_rating': forms.Select(
+                choices=[('', 'Select a PEGI rating')] + list(PEGI)),
         }
+
 
 class SearchForm(forms.Form):
     PLATFORM_CHOICES = [
