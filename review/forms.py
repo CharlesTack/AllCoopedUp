@@ -21,7 +21,7 @@ class ReviewForm(forms.ModelForm):
         ]
         labels = {
             'index_excerpt': 'Excerpt for index page',
-            'pegi_rating': 'PEGI Rating',
+            'pegi_rating': 'PEGI rating',
             'featured_image': 'Image (Please see copyright notice below)',
         }
         widgets = {
