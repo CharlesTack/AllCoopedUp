@@ -89,53 +89,53 @@
             <hr>
         </div>
     </div>
-</div>
-<!-- Comments Section -->
-<div class="row">
-    <div class="col-md-8 card mb-4 mt-3">
-        <h3>Comments:</h3>
-        <div class="card-body">
-            {% for comment in comments %}
-            <div class="p-2 comments
-                {% if not comment.approved and comment.author == user %}
-                faded{% elif not comment.approved %} d-none{% endif %}">
-                <p class="font-weight-bold">
-                    {{ comment.author }} wrote:
-                </p>
-                <div id="comment{{ comment.id }}">
-                    {{ comment.comment | linebreaks }}
+
+    <!-- Comments Section -->
+    <div class="row">
+        <div class="col-md-8 card mb-4 mt-3">
+            <h3>Comments:</h3>
+            <div class="card-body">
+                {% for comment in comments %}
+                <div class="p-2 comments
+                    {% if not comment.approved and comment.author == user %}
+                    faded{% elif not comment.approved %} d-none{% endif %}">
+                    <p class="font-weight-bold">
+                        {{ comment.author }} wrote:
+                    </p>
+                    <div id="comment{{ comment.id }}">
+                        {{ comment.comment | linebreaks }}
+                    </div>
+                    {% if not comment.approved and comment.author == user %}
+                    <p class="approval">
+                        This comment is awaiting approval
+                    </p>
+                    {% endif %}
+                    {% if user.is_authenticated and comment.author == user %}
+                    <button class="btn btn-edit" data-comment_id="{{ comment.id }}" data-bs-toggle="modal" data-bs-target="#editCommentModal">Edit</button>
+                    <button class="btn btn-delete" data-comment_id="{{ comment.id }}" data-bs-toggle="modal" data-bs-target="#deleteCommentModal">Delete</button>
+                    {% endif %}
                 </div>
-                {% if not comment.approved and comment.author == user %}
-                <p class="approval">
-                    This comment is awaiting approval
-                </p>
-                {% endif %}
-                {% if user.is_authenticated and comment.author == user %}
-                <button class="btn btn-edit" data-comment_id="{{ comment.id }}" data-bs-toggle="modal" data-bs-target="#editCommentModal">Edit</button>
-                <button class="btn btn-delete" data-comment_id="{{ comment.id }}" data-bs-toggle="modal" data-bs-target="#deleteCommentModal">Delete</button>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Creating New Comments -->
+        <div class="col-md-4 card mb-4 mt-3">
+            <div class="card-body">
+                {% if user.is_authenticated %}
+                <h3>Leave a comment:</h3>
+                <p>Commenting as: {{ user.username }}</p>
+                <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% else %}
+                <p>Log in to leave a comment</p>
                 {% endif %}
             </div>
-            {% endfor %}
-        </div>
-    </div>
-    <!-- Creating New Comments -->
-    <div class="col-md-4 card mb-4 mt-3">
-        <div class="card-body">
-            {% if user.is_authenticated %}
-            <h3>Leave a comment:</h3>
-            <p>Commenting as: {{ user.username }}</p>
-            <form id="commentForm" method="post" style="margin-top: 1.3em;">
-                {{ comment_form | crispy }}
-                {% csrf_token %}
-                <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-            </form>
-            {% else %}
-            <p>Log in to leave a comment</p>
-            {% endif %}
         </div>
     </div>
 </div>
-
 <!-- Delete Review confirmation modal -->
 <div class="modal fade" id="deleteReviewModal" tabindex="-1" aria-labelledby="deleteReviewModalLabel" aria-hidden="true">
     <div class="modal-dialog">
