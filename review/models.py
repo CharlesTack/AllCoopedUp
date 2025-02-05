@@ -49,6 +49,6 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ["-review"]
-    
+
     def __str__(self):
         return f"Comment: {self.comment} by {self.author} on {self.review}"
