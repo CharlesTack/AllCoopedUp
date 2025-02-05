@@ -19,6 +19,11 @@ class ReviewForm(forms.ModelForm):
             'platform_availability_nintendo', 'platform_availability_pc', 
             'featured_image', 'full_review',
         ]
+        labels = {
+            'index_excerpt': 'Excerpt for index page',
+            'pegi_rating': 'PEGI Rating',
+            'featured_image': 'Image (Please see copyright notice below)',
+        }
         widgets = {
             'full_review': SummernoteWidget(),
             'star_rating': forms.Select(choices=[('', 'Select a rating')] + list(RATING)),
