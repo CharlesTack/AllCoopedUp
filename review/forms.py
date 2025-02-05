@@ -41,8 +41,18 @@ class SearchForm(forms.Form):
         ('nintendo', 'Nintendo'),
         ('pc', 'PC'),
     ]
-    query = forms.CharField(max_length=200, required=False, label='Search for a game')
-    platform = forms.ChoiceField(choices=[('', 'All Platforms')] + PLATFORM_CHOICES, required=False)
-    pegi_rating = forms.ChoiceField(choices=[('', 'All PEGI Ratings')] + list(PEGI), required=False)
-    co_op_mode_couch = forms.BooleanField(required=False, label='Co-op Mode Couch')
-    co_op_mode_online = forms.BooleanField(required=False, label='Co-op Mode Online')
+    query = forms.CharField(
+        max_length=200, required=False, label='Search for a game'
+    )
+    platform = forms.ChoiceField(
+        choices=[('', 'All Platforms')] + PLATFORM_CHOICES, required=False
+    )
+    pegi_rating = forms.ChoiceField(
+        choices=[('', 'All PEGI Ratings')] + list(PEGI), required=False
+    )
+    co_op_mode_couch = forms.BooleanField(
+        required=False, label='Co-op Mode Couch'
+    )
+    co_op_mode_online = forms.BooleanField(
+        required=False, label='Co-op Mode Online'
+    )
