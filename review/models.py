@@ -12,9 +12,8 @@ class Review(models.Model):
     game_title = models.CharField(max_length=100, unique=True)
     review_title = models.CharField(max_length=200, unique=True)
     author = models.ForeignKey(
-    User, on_delete=models.CASCADE, related_name="reviewer"
-)
-    # related_name above (and the three below) may need to be changed!
+        User, on_delete=models.CASCADE, related_name="reviewer"
+    )
     featured_image = CloudinaryField('image', default='missingboxart')
     platform_reviewed_on = models.IntegerField(choices=PLATFORM, default=None)
     index_excerpt = models.TextField()
@@ -33,17 +32,18 @@ class Review(models.Model):
 
     class Meta:
         ordering = ["-game_title"]
-    
+
     def __str__(self):
         return f"{self.game_title} | written by {self.author}"
 
+
 class Comment(models.Model):
     review = models.ForeignKey(
-    Review, on_delete=models.CASCADE, related_name="comments"
-)
+        Review, on_delete=models.CASCADE, related_name="comments"
+    )
     author = models.ForeignKey(
-    User, on_delete=models.CASCADE, related_name="commenter"
-)
+        User, on_delete=models.CASCADE, related_name="commenter"
+    )
     comment = models.TextField()
     approved = models.BooleanField(default=False)
 
