@@ -27,12 +27,20 @@ class ReviewList(generic.ListView):
         """
         context = super().get_context_data(**kwargs)
         query = self.request.GET.get("query", "")
+        platform = self.request.GET.get("platform", "")
+        pegi_rating = self.request.GET.get("pegi_rating", "")
+        co_op_mode_couch = self.request.GET.get("co_op_mode_couch", "")
+        co_op_mode_online = self.request.GET.get("co_op_mode_online", "")
         form = SearchForm(self.request.GET)
         results = context["review_list"]
 
         # Add extra context for search feedback
         context["form"] = form
         context["query"] = query
+        context["platform"] = platform
+        context["pegi_rating"] = pegi_rating
+        context["co_op_mode_couch"] = co_op_mode_couch
+        context["co_op_mode_online"] = co_op_mode_online
         context["no_results"] = query and not results
 
         return context

@@ -153,11 +153,13 @@
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
             <li>
-                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
+                <a href="?page={{ page_obj.previous_page_number }}{% if query %}&query={{ query }}{% endif %}{% if platform %}&platform={{ platform }}{% endif %}{% if pegi_rating %}&pegi_rating={{ pegi_rating }}{% endif %}{% if co_op_mode_couch %}&co_op_mode_couch={{ co_op_mode_couch }}{% endif %}{% if co_op_mode_online %}&co_op_mode_online={{ co_op_mode_online }}{% endif %}" class="page-link">&laquo; PREV</a>
             </li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            <li>
+                <a href="?page={{ page_obj.next_page_number }}{% if query %}&query={{ query }}{% endif %}{% if platform %}&platform={{ platform }}{% endif %}{% if pegi_rating %}&pegi_rating={{ pegi_rating }}{% endif %}{% if co_op_mode_couch %}&co_op_mode_couch={{ co_op_mode_couch }}{% endif %}{% if co_op_mode_online %}&co_op_mode_online={{ co_op_mode_online }}{% endif %}" class="page-link"> NEXT &raquo;</a>
+            </li>
             {% endif %}
         </ul>
     </nav>
