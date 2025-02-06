@@ -206,6 +206,10 @@ body {
     color: var(--highlight-color-light);
 }
 
+input, form {
+    color: black; /* black */
+}
+
 /* used important tags to fix issues below */
 
 /* Style for welcome message links */
