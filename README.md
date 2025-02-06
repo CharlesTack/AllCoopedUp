@@ -1,23 +1,21 @@
 # AllCoopedUp
 Full Stack Co-operative Video Game Review Site
+![Homepage screenshot](static/readme/images/indexpageoverview.jpg)
+- Deployed project can be found [here](https://https://all-cooped-up-12274f373445.herokuapp.com/).
 
-Adding section headings and notes which are to be addressed and deleted.
-
-Note 1:
-Add a screenshot of the homepage
-and a link to where the deployed project can be found.
+#### A note on the name
+"All Cooped Up" is play on words relating to the site's purpose being to review co-operatively played games.  It also harks back to Covid-19 lockdowns where there was an large increase in the numbers of people playing video games together online whilst they were "cooped up" at home. 
 
 ## User experience
 ### Purpose
-
-Note 2:
-Add purpose text
+- All Cooped Up is designed for lovers of co-op games.
+- The site has been deployed with a selection of reviews, but users are encouraged to contribute their own reviews to help other users pick the best games to play.
+- Filters are available and easy to use so that users can specify a number of factors to limit the number of reviews being presented to them.
 
 ## Agile methodology
-
-Note 3:
-Add note on agile methodology
-Add a link to the project board
+- Agile methodology is "a set of methods and practices where solutions evolve through collaboration between self-organizing, cross-functional teams" ([reference](https://www.agilealliance.org/agile-essentials/)).
+- A project board was set-up to keep track of user stories. Each user story was assigned a 'MoSCoW' prioritisation (must have, should have, could have, won't have) tag. The board can be found [here](https://github.com/users/CharlesTack/projects/16).
+- The project board also includes columns for bugs which are open and those which have been closed.
 
 ### User stories
 
