@@ -4,13 +4,25 @@ from .models import Comment, Review, RATING, PEGI
 
 
 class CommentForm(forms.ModelForm):
+    """
+    Form class for users to comment on a review
+    """
     class Meta:
+        """
+        Specify the django model and order of the fields
+        """
         model = Comment
         fields = ('comment',)
 
 
 class ReviewForm(forms.ModelForm):
+    """
+    Form class for users to submit a review.
+    """
     class Meta:
+        """
+        Specify the Django model and order of the fields.
+        """
         model = Review
         fields = [
             'game_title', 'review_title', 'platform_reviewed_on',
@@ -35,6 +47,9 @@ class ReviewForm(forms.ModelForm):
 
 
 class SearchForm(forms.Form):
+    """
+    Form class for users to search for reviews.
+    """
     PLATFORM_CHOICES = [
         ('xbox', 'Xbox'),
         ('playstation', 'PlayStation'),

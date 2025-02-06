@@ -10,14 +10,21 @@ from .forms import CommentForm, ReviewForm, SearchForm
 
 logger = logging.getLogger(__name__)
 
+
 # Create your views here.
 class ReviewList(generic.ListView):
+    """
+    View to list all reviews with pagination and search functionality.
+    """
     model = Review
     template_name = "review/index.html"
     context_object_name = "review_list"
     paginate_by = 6
 
     def get_context_data(self, **kwargs):
+        """
+        Add extra context for search feedback.
+        """
         context = super().get_context_data(**kwargs)
         query = self.request.GET.get("query", "")
         form = SearchForm(self.request.GET)
@@ -26,11 +33,14 @@ class ReviewList(generic.ListView):
         # Add extra context for search feedback
         context["form"] = form
         context["query"] = query
-        context["no_results"] = query and not results  # True if search performed but no results
+        context["no_results"] = query and not results
 
         return context
 
     def get_queryset(self):
+        """
+        Filter the queryset based on search parameters.
+        """
         queryset = super().get_queryset().order_by('game_title')
         query = self.request.GET.get("query", None)
         platform = self.request.GET.get("platform", None)
@@ -44,7 +54,9 @@ class ReviewList(generic.ListView):
             if platform == 'xbox':
                 queryset = queryset.filter(platform_availability_xbox=True)
             elif platform == 'playstation':
-                queryset = queryset.filter(platform_availability_playstation=True)
+                queryset = queryset.filter(
+                    platform_availability_playstation=True
+                )
             elif platform == 'nintendo':
                 queryset = queryset.filter(platform_availability_nintendo=True)
             elif platform == 'pc':
@@ -60,6 +72,9 @@ class ReviewList(generic.ListView):
 
 
 def review_detail(request, slug):
+    """
+    View to display the details of a single review, including comments.
+    """
     queryset = Review.objects.filter(status=1)
     review = get_object_or_404(queryset, slug=slug)
     comments = review.comments.all()
@@ -72,9 +87,11 @@ def review_detail(request, slug):
             comment.review = review
             comment.save()
             messages.add_message(
-                request, messages.SUCCESS, "Thanks for your comment. It will be added once approved."
+                request, messages.SUCCESS,
+                "Thanks for your comment. "
+                "It will be added once approved."
             )
-    
+
     comment_form = CommentForm()
 
     return render(
@@ -87,46 +104,69 @@ def review_detail(request, slug):
          },
     )
 
+
 @login_required
 def edit_review(request, slug):
+    """
+    View to edit an existing review.
+    """
     review = get_object_or_404(Review, slug=slug, author=request.user)
     if request.method == 'POST':
         form = ReviewForm(request.POST, request.FILES, instance=review)
         if form.is_valid():
             review = form.save(commit=False)
-            review.status = 0  # Set the status to draft (0) or pending approval
+            review.status = 0  # Set the status to draft (0) pending approval
             review.save()
-            messages.success(request, 'Your review has been updated and is pending approval.')
+            messages.success(
+                request,
+                'Your review has been updated and is pending approval.'
+            )
             return redirect('home')
     else:
         form = ReviewForm(instance=review)
     return render(request, 'review/submit_review.html', {'form': form})
 
+
 @login_required
 def delete_review(request, slug):
+    """
+    View to delete an existing review.
+    """
     logger.info(f"Received request to delete review with slug: {slug}")
     review = get_object_or_404(Review, slug=slug, author=request.user)
     review.delete()
     messages.success(request, 'Your review has been deleted.')
     return redirect('home')
 
+
 @login_required
 def submit_review(request):
+    """
+    View to submit a new review.
+    """
     if request.method == 'POST':
-        form = ReviewForm(request.POST, request.FILES) # Include request.FILES to handle file uploads
+        form = ReviewForm(request.POST, request.FILES)
         if form.is_valid():
             review = form.save(commit=False)
             review.author = request.user
-            review.status = 0 # 0 means the review is draft as default
-            review.slug = slugify(review.game_title)  # Generate slug from game title
+            review.status = 0  # 0 means the review is draft as default
+            review.slug = slugify(review.game_title)
             review.save()
-            messages.success(request, 'Many thanks! Your review has been submitted and is pending approval.')
-            return redirect('home')  # this is the page where the user will be redirected to after successfully submitting a review
+            messages.success(
+                request,
+                'Many thanks! Your review has been '
+                'submitted and is pending approval.'
+            )
+            return redirect('home')
     else:
         form = ReviewForm()
     return render(request, 'review/submit_review.html', {'form': form})
 
+
 def comment_edit(request, slug, comment_id):
+    """
+    View to edit an existing comment on a review.
+    """
     if request.method == "POST":
         queryset = Review.objects.filter(status=1)
         review = get_object_or_404(queryset, slug=slug)
@@ -140,12 +180,22 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(
+                request, messages.ERROR,
+                'Error updating comment!'
+            )
 
     return HttpResponseRedirect(reverse('review_detail', args=[slug]))
 
+
 def comment_delete(request, slug, comment_id):
-    logger.info(f"Received request to delete comment with ID: {comment_id} for review with slug: {slug}")
+    """
+    View to delete an existing comment on a review.
+    """
+    logger.info(
+        f"Received request to delete comment with ID: {comment_id} "
+        f"for review with slug: {slug}"
+    )
     queryset = Review.objects.filter(status=1)
     review = get_object_or_404(queryset, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)

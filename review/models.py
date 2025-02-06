@@ -7,8 +7,20 @@ RATING = ((1, "1⭐"), (2, "2⭐"), (3, "3⭐"), (4, "4⭐"), (5, "5⭐"))
 PEGI = ((1, "3"), (2, "7"), (3, "12"), (4, "16"), (5, "18"))
 STATUS = ((0, "Draft"), (1, "Published"))
 
+"""
+Tuples for choice fields in the Review model.
+
+PLATFORM: Choices for the platform_reviewed_on field.
+RATING: Choices for the star_rating field.
+PEGI: Choices for the pegi_rating field.
+STATUS: Choices for the status field.
+"""
+
 
 class Review(models.Model):
+    """
+    Model representing a game review.
+    """
     game_title = models.CharField(max_length=100, unique=True)
     review_title = models.CharField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -35,13 +47,22 @@ class Review(models.Model):
     status = models.IntegerField(choices=STATUS, default=None)
 
     class Meta:
+        """
+        Meta class for the Review model.
+        """
         ordering = ["-game_title"]
 
     def __str__(self):
+        """
+        String representation of the Review model.
+        """
         return f"{self.game_title} | written by {self.author}"
 
 
 class Comment(models.Model):
+    """
+    Model representing a comment on a review.
+    """
     review = models.ForeignKey(
         Review, on_delete=models.CASCADE, related_name="comments"
     )
@@ -52,7 +73,13 @@ class Comment(models.Model):
     approved = models.BooleanField(default=False)
 
     class Meta:
+        """
+        Meta class for the Comment model.
+        """
         ordering = ["-review"]
 
     def __str__(self):
+        """
+        String representation of the Comment model.
+        """
         return f"Comment: {self.comment} by {self.author} on {self.review}"

@@ -5,6 +5,10 @@ from .models import Review, Comment
 
 @admin.register(Review)
 class ReviewAdmin(SummernoteModelAdmin):
+    """
+    Lists fields for display in admin, fileds for search,
+    field filters, fields to prepopulate and rich-text editor.
+    """
 
     list_display = ('game_title', 'slug', 'status', 'approved')
     search_fields = ['game_title']
