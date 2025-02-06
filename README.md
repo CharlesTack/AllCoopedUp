@@ -1,5 +1,5 @@
 # AllCoopedUp
-Full Stack Co-operative Video Game Review Site
+Full Stack Co-operative Video Game Review Site  
 ![Homepage screenshot](static/readme/images/indexpageoverview.jpg)
 - Deployed project can be found [here](https://https://all-cooped-up-12274f373445.herokuapp.com/).
 
@@ -97,8 +97,15 @@ _Tasks:_
 
 ## Design
 
-Note 5:
-Link to the wireframes
+### Wireframes
+
+A full set of wireframes were created to display the design for each and every page in the site.
+
+For example:  
+## index.html:  
+![index screenshot](static/readme/images/wireframes/index.jpg)
+
+Screenshots of all wireframes are [here](static/readme/documents/wireframes.md)
 
 ### Colour Scheme
 
