@@ -18,7 +18,7 @@ _"All Cooped Up"_ is play on words relating to the site's purpose being to revie
 - The project board also includes columns for bugs which are open and those which have been closed.
 
 ### User stories
-A total of 27 user stories were created and entered into the project board, categorised into Must-Have, Should-Have and Could-Have and labelled appropriately. These were then sorted into To-Do, In Progress and Done and were moved through each column during the development.  The full board including all User Stories can be found [here](https://github.com/users/CharlesTack/projects/16).
+A total of 27 user stories were created and entered into the project board, categorised into Must-Have (8 stories), Should-Have (11 stories) and Could-Have (8 stories) and labelled appropriately. These were then sorted into To-Do, In Progress and Done and were moved through each column during the development.  The full board including all User Stories can be found [here](https://github.com/users/CharlesTack/projects/16).
 
 I have included all of the "Must-Have" stories below for the purpose of providing examples:
 
