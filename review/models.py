@@ -14,7 +14,9 @@ class Review(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="reviewer"
     )
-    featured_image = CloudinaryField('image', default='missingboxart')
+    featured_image = CloudinaryField(
+        'image', default='missingboxart', blank=True, null=True
+    )
     platform_reviewed_on = models.IntegerField(choices=PLATFORM, default=None)
     index_excerpt = models.TextField()
     full_review = models.TextField()
@@ -22,7 +24,9 @@ class Review(models.Model):
     star_rating = models.IntegerField(choices=RATING, default=None)
     co_op_mode_couch = models.BooleanField(default=False)
     co_op_mode_online = models.BooleanField(default=False)
-    pegi_rating = models.IntegerField(choices=PEGI, default=None)
+    pegi_rating = models.IntegerField(
+        choices=PEGI, default=None, blank=True, null=True
+    )
     platform_availability_xbox = models.BooleanField(default=False)
     platform_availability_playstation = models.BooleanField(default=False)
     platform_availability_nintendo = models.BooleanField(default=False)
