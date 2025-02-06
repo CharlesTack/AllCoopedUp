@@ -4,7 +4,7 @@ Full Stack Co-operative Video Game Review Site
 - Deployed project can be found [here](https://https://all-cooped-up-12274f373445.herokuapp.com/).
 
 #### A note on the name
-"All Cooped Up" is play on words relating to the site's purpose being to review co-operatively played games.  It also harks back to Covid-19 lockdowns where there was an large increase in the numbers of people playing video games together online whilst they were "cooped up" at home. 
+_"All Cooped Up"_ is play on words relating to the site's purpose being to review co-operatively played games.  It also harks back to Covid-19 lockdowns where there was an large increase in the numbers of people playing video games together online whilst they were "cooped up" at home. 
 
 ## User experience
 ### Purpose
