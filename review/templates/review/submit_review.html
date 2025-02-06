@@ -6,7 +6,7 @@
   <div class="row justify-content-center">
     <div class="col-12 col-md-8">
       <h2>{% if form.instance.pk %}Edit Review{% else %}Submit a Review{% endif %}</h2>
-      <form method="post" enctype="multipart/form-data"> <!-- Add enctype="multipart/form-data" -->
+      <form method="post" enctype="multipart/form-data"> <!-- enctype="multipart/form-data" specifies how form data should be encoded and is required for file uploads-->
         {% csrf_token %}
         {{ form|crispy }}
         <button type="submit" class="mb-4 btn btn-signup">{% if form.instance.pk %}Update{% else %}Submit{% endif %}</button>

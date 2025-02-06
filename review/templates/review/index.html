@@ -2,7 +2,6 @@
 {% load static %}
 {% block content %}
 
-<!-- index.html content starts here -->
 <div class="container-fluid">
     <div class="row">
         <!-- Welcome message -->
@@ -53,7 +52,7 @@
                         {% endfor %}
                     </select>
                 </div>
-                <div class="w-100"></div> <!-- Force a new row -->
+                <div class="w-100"></div> <!-- Included to force a new row -->
                 <div class="col-md-3 col-sm-6 col-10 mb-2">
                     <div class="form-check d-flex align-items-center">
                         <input class="form-check-input" type="checkbox" name="co_op_mode_couch" id="co_op_mode_couch" {% if form.co_op_mode_couch.value %}checked{% endif %}>
@@ -66,7 +65,7 @@
                         <label class="form-check-label" for="co_op_mode_online">Co-op Mode Online</label>
                     </div>
                 </div>
-                <div class="w-100"></div> <!-- Force a new row -->
+                <div class="w-100"></div> <!-- Included to force a new row -->
                 <div class="col-auto mb-2">
                     <button class="btn btn-signup" type="submit">Filter</button>
                 </div>
@@ -165,5 +164,4 @@
     {% endif %}
 </div>
 
-<!-- index.html content ends here -->
 {% endblock %}

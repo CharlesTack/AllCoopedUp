@@ -3,15 +3,13 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+<!-- Banner/masthead section -->
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-                <!-- Game title goes in these h1 tags -->
                 <h1 class="review-title">{{ review.game_title }}</h1>
-                <!-- Review title goes in these p tags-->
                 <p class="review-subtitle">{{ review.review_title }}</p>
-                <!-- Review author goes in these p tags -->
                 <p class="review-by">by {{ review.author }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
