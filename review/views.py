@@ -200,8 +200,6 @@ def comment_delete(request, slug, comment_id):
         f"Received request to delete comment with ID: {comment_id} "
         f"for review with slug: {slug}"
     )
-    queryset = Review.objects.filter(status=1)
-    review = get_object_or_404(queryset, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
 
     if comment.author == request.user:
