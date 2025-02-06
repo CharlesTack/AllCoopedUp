@@ -15,18 +15,14 @@
       {% endif %}
     </div>
     <div class="col-12 col-md-8">
-      <!-- Title goes between these h2 tags -->
       <h2>{{ about.title }}</h2>
       <div class="about-content">
-      <!-- Content goes directly underneath this -->
       {{ about.content | safe }}
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col text-right">
-      <!-- Updated on field goes in here -->
-
       <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
     </div>
   </div>
@@ -35,7 +31,6 @@
       <h2>Let's collaborate!</h2>
       <p>If you've enjoyed this site, like my journey/story and would like
         to work together on a project, please fill in the form below!</p>
-
         <form method="post">
           {{ collaborate_form | crispy }}
           {% csrf_token %}
