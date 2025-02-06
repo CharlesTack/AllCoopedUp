@@ -44,7 +44,7 @@ class Review(models.Model):
     platform_availability_nintendo = models.BooleanField(default=False)
     platform_availability_pc = models.BooleanField(default=False)
     approved = models.BooleanField(default=False)
-    status = models.IntegerField(choices=STATUS, default=None)
+    status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
         """

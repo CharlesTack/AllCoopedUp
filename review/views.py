@@ -41,7 +41,11 @@ class ReviewList(generic.ListView):
         """
         Filter the queryset based on search parameters.
         """
-        queryset = super().get_queryset().order_by('game_title')
+        queryset = (
+            super().get_queryset()
+            .filter(status=1)
+            .order_by('game_title')
+        )
         query = self.request.GET.get("query", None)
         platform = self.request.GET.get("platform", None)
         pegi_rating = self.request.GET.get("pegi_rating", None)
