@@ -33,7 +33,7 @@ class ReviewForm(forms.ModelForm):
             'featured_image', 'full_review',
         ]
         labels = {
-            'index_excerpt': 'Excerpt for index page',
+            'index_excerpt': 'One line teaser for the home page',
             'pegi_rating': 'PEGI rating',
             'featured_image': 'Image (Please see copyright notice below)',
         }
@@ -43,6 +43,7 @@ class ReviewForm(forms.ModelForm):
                 choices=[('', 'Select a rating')] + list(RATING)),
             'pegi_rating': forms.Select(
                 choices=[('', 'Select a PEGI rating')] + list(PEGI)),
+            'index_excerpt': forms.Textarea(attrs={'class': 'index-excerpt'}),
         }
 
 

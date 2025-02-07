@@ -229,6 +229,11 @@ select, select option {
     color: black !important;
 }
 
+/* Style for the excerpt for index page text field */
+.index-excerpt {
+    height: 72px; /* Adjust the height as needed */
+}
+
 /* Added below and marked as important to overwrite inline styling being forced by Summernote */
 .about-content p {
     color: var(--primary-color) !important;
