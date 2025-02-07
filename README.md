@@ -121,7 +121,6 @@ I used Code Institute's PostgreSQL database.
 
 ### Database planning
 - I used an Entity Relationship Diagram to plan my database.  
-Reference the ERD table/diagram and link an image of it.
 ![all ERD models screenshot](static/readme/images/allerdmodels.jpg)
 
 ### Creating a database
