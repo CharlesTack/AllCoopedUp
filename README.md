@@ -194,16 +194,25 @@ _Once the project is cloned or forked, in order to run it locally, you'll need t
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) and [Django](https://en.wikipedia.org/wiki/Django_(web_framework)) were used to build the backend review framework.
 - [GitHub](https://github.com/) was used to host the repository and version control.
 - [Heroku](https://heroku.com/) was the hosting platform.
-- [VS Code](https://code.visualstudio.com/) was the IDE.  
+- [VS Code](https://code.visualstudio.com/) was the IDE.
+- [Copilot](https://copilot.microsoft.com/) was the main AI.
+- [ChatGPT](https://chatgpt.com/) was the secondary AI.  
 _Further tools and resources used are noted in credits below_
 
 ## The use of AI
+Throughout development of this site AI has been used in a multitude of ways: image creation, code generation, to provide step-by-step guides to enable the site creator to navigate through coding processes, debugging of code, code cleansing, clearing errors, and advising on suitable/positive UX language.  The AI tools have sped up each process and advanced the capabilities of the site creator.
 
 ### AI Usage in Code Creation
+Copilot has been predominantly used as the main AI pair-programmer on this project as it is built into VS Code.  Via Chat and Inline Chat functions, Copilot has assisted at every step of the way with every coding technology used.  Prompts have been specific and have been phrased in such as way as to enable step-by-step coding which reduced errors and fostered confidence in the site creator.  
+The Copilot code has not always been completely correct, and often not at the first (or second) attempt.  On occasion, a secondary AI (ChatGPT) has been used to reach solutions that Copilot was not achieving.  
+Although Copilot is a phenominally powerful tool in this type of project, the site creator must still understand the code being created to ensure it is correct and free of errors.  That said, Copilot also created code which the site creator had not thought of and so acted as a teacher.
 
 ### AI Usage in Debugging
+Copilot has been used to help in the debugging process on this project.  Although Django automated testing was not utilised in the workspace, Copilot was used to help to understand the cause of bugs and to produce guidance on correcting the code.  Further explanations were also provided on particularly complex solutions to ensure that the resolution was fully understood.  
+As and when bugs were discovered and registered on the project board, Copilot was regularly used to understand the cause of and find the solution to the bugs.  On occasion these required debugging methods, such as print statements in JavaScript which Copilot coached on the usage of.
 
 ### AI Usage in Performance and UX Improvements
+Copilot has been consulted on aspects of UX such as appropriate phrasing to maximise clarity and intelligibility.  As an AI tool it has automatically provided code which has intrinsic UX benefits.  One example was on the creation of code to handle alert messaging when a game title search resulted in zero reviews.  Copilot automatically provided a link to the site's "Add a Review" page, which is terrific UX.
 
 ## Overall Reflection on AI's Role in Development
 
