@@ -62,13 +62,17 @@ highlight-color-light: #F093B2; (Light Pink - was Amaranth Pink, now Illusion)
 
 ### Typography
 
-Note 8:
-Include notes on where the fonts were sourced from and why each font was chosen.  Include examples of the fonts.
+[Google Fonts](https://fonts.google.com/) was used to select an appropriately styled font.  The font needed to be easy to read and suitable for a video game related site.  
+Filters were applied to limit options to those tagged as "Futuristic" and "Humanist".  Of the options presented, "Ubuntu Sans" felt the most appropriate.  
+![Font Selection screenshot](static/readme/images/fontselection.png)
 
 ## Images
 
-Note 9:
-Enter details of where I sources the images from and a note regarding copyright.
+All review "box-art" images were sourced from [wikipedia](https://www.wikipedia.org/) due to their position on copyright (an example of which can be found [here](https://en.wikipedia.org/wiki/File:Minecraft_2024_cover_art.png)).  
+The site logo, which is used in the navbar, was created using Copilot.  The initial image was unusable in it's original form and so processing to crop and change the background colour was done using the integrated editting tools in the Microsoft Photos app.  
+Before and after images are included below:  
+![logo initial](static/readme/images/copilotlogo1small.jpg)
+![logo final](static/readme/images/copilotlogocroppedwhite.jpg)
 
 ## Features:
 
@@ -134,6 +138,10 @@ Make a note of all of the "Could-Have" user stories which weren't delivered and 
 
 Note 22:
 Credit every tool, site and reference I've used on the project
+
+Microsoft photos
+coolors
+diffchecker
 
 ## Acknowledgements
 
