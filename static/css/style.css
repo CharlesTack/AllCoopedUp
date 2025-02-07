@@ -5,12 +5,12 @@
 :root {
     --primary-font: "Ubuntu Sans", serif;
     --secondary-font: "Lato", sans-serif;
-    --background-color: #2B2D42; /*dark blue - Space cadet*/
+    --background-color: #2B2D42; /*dark blue - was Space Cadet, now Black Violet*/
     --primary-color: #FFFFFF; /* white used for text on darker colours*/
-    --secondary-color: #2C7DA5; /* bright blue - Blue(NCS)*/
-    --tertiary-color: #847089; /* dark blush - Mountbatten pink*/
-    --highlight-color: #D81E5B; /* Bright Pink - Raspberry*/
-    --highlight-color-light: #F093B2; /* Light Pink - Amaranth pink*/ 
+    --secondary-color: #2C7DA5; /* bright blue - was Blue(NCS), now Prominent Blue*/
+    --tertiary-color: #847089; /* dark blush - was Mountbatten Pink, now Purple Grey*/
+    --highlight-color: #D81E5B; /* Bright Pink - was Raspberry, now Rose Rush*/
+    --highlight-color-light: #F093B2; /* Light Pink - was Amaranth Pink, now Illusion*/ 
 }
 
 * {

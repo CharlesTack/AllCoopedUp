@@ -5,12 +5,12 @@
 :root {
     --primary-font: "Ubuntu Sans", serif;
     --secondary-font: "Lato", sans-serif;
-    --background-color: #2B2D42; /*dark blue - Space cadet*/
+    --background-color: #2B2D42; /*dark blue - was Space Cadet, now Black Violet*/
     --primary-color: #FFFFFF; /* white used for text on darker colours*/
-    --secondary-color: #2C7DA5; /* bright blue - Blue(NCS)*/
-    --tertiary-color: #847089; /* dark blush - Mountbatten pink*/
-    --highlight-color: #D81E5B; /* Bright Pink - Raspberry*/
-    --highlight-color-light: #F093B2; /* Light Pink - Amaranth pink*/ 
+    --secondary-color: #2C7DA5; /* bright blue - was Blue(NCS), now Prominent Blue*/
+    --tertiary-color: #847089; /* dark blush - was Mountbatten Pink, now Purple Grey*/
+    --highlight-color: #D81E5B; /* Bright Pink - was Raspberry, now Rose Rush*/
+    --highlight-color-light: #F093B2; /* Light Pink - was Amaranth Pink, now Illusion*/ 
 }
 
 * {
@@ -249,36 +249,4 @@ select, select option {
 
 .force-white {
     color: var(--primary-color) !important;
-}
-
-/* Enforce the default site font for Summernote content */
-.summernote-content {
-    font-family: var(--primary-font) !important;
-}
-
-/* Ensure all text within the Summernote content uses the default site font */
-.summernote-content * {
-    font-family: var(--primary-font) !important;
-}
-
-/* Increase specificity to override inline styles */
-.summernote-content div,
-.summernote-content p,
-.summernote-content span,
-.summernote-content h1,
-.summernote-content h2,
-.summernote-content h3,
-.summernote-content h4,
-.summernote-content h5,
-.summernote-content h6,
-.summernote-content strong,
-.summernote-content em,
-.summernote-content u,
-.summernote-content a {
-    font-family: var(--primary-font) !important;
-}
-
-/* Target inline styles directly */
-.summernote-content [style*="font-family"] {
-    font-family: var(--primary-font) !important;
 }

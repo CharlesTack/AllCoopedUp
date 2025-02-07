@@ -16,6 +16,8 @@ _"All Cooped Up"_ is play on words relating to the site's purpose being to revie
 - Agile methodology is "a set of methods and practices where solutions evolve through collaboration between self-organizing, cross-functional teams" ([reference](https://www.agilealliance.org/agile-essentials/)).
 - A project board was set-up to keep track of user stories. Each user story was assigned a 'MoSCoW' prioritisation (must have, should have, could have, won't have) tag. The board can be found [here](https://github.com/users/CharlesTack/projects/16).
 - The project board also includes columns for bugs which are open and those which have been closed.
+An image of my project board taken late in development is below for reference:
+![Project Board screenshot](static/readme/images/projectboard.jpg)
 
 ### User stories
 A total of 27 user stories were created and entered into the project board, categorised into Must-Have (8 stories), Should-Have (11 stories) and Could-Have (8 stories) and labelled appropriately. These were then sorted into To-Do, In Progress and Done columns and were moved through each column during the development.  The full board including all User Stories can be found [here](https://github.com/users/CharlesTack/projects/16).
@@ -46,13 +48,17 @@ Screenshots of all wireframes are [here](static/readme/documents/wireframes.md)
 
 ### Colour Scheme
 
-Note 6:
-Provide text on how I decided on the colours scheme and what tools/sources were used.
+Consideration was given to using the colour schemes of video game consoles, such as green, black and white for Xbox, but a decision was taken to not lean towards any platform so that the site is impartial.  [coolors.co](https://coolors.co/) was used to find colours which complimented each other (by using the lock function) whilst being indicative of technology and gaming (and also not being the same as any palette used by the likes of PlayStation).  Once the palette had been selected, the colours were put into CSS variables to allow for quick changes which would be needed to ensure high contrast ratios.  The colours were adjusted slightly from their original shades at the contrast ratio testing stage.  The original palette is shown below:  
+![original palette screenshot](static/readme/images/originalpalette.jpg)
 
 #### Colour palette
 
-Note 7:
-Provide a breakdown of each colour used and try to get a swatch to display them.
+background-color: #2B2D42; (dark blue - was Space Cadet, now Black Violet)  
+primary-color: #FFFFFF; (white used for text on darker colours)  
+secondary-color: #2C7DA5; (bright blue - was Blue(NCS), now Prominent Blue)  
+tertiary-color: #847089; (dark blush - was Mountbatten Pink, now Purple Grey)  
+highlight-color: #D81E5B; (Bright Pink - was Raspberry, now Rose Rush)  
+highlight-color-light: #F093B2; (Light Pink - was Amaranth Pink, now Illusion)  
 
 ### Typography
 
