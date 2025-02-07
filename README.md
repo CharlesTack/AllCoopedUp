@@ -76,13 +76,48 @@ Before and after images are included below:
 
 ## Features:
 
-Note 10:
-Enter details for each feature from the document you created.  Use tripe hash/sharp marks for the heading of each feature.  This can be done early as we know the features.
+### Home Page:
+The home page is the index of all of the reviews on the site.  It comprises 6 review cards per page which are vertically stacked on mobile devices and 3x2 on tablet sized screens and larger.  It features a navbar, a search/filters section, the main review card section, and a footer.  Via the use of a base.html file, the navbar and footer are visible from each subsequent page.
+
+#### Navbar
+There is a navbar which includes the site logo (which doubles as a "home" button), and links to take the user to the "About" page, as well as links to the "Login", "Logout", "Register" and "Add a Review" pages, which dynamically appear and disappear depending on login state.  In the top right corner is the sites motto "Games are best played together".  Feedback messages to users (such as confirmation of comment submission) are presented just below the Navbar.
+
+#### Search/Filters
+Just above this section is where the user can see their logged in status.  
+A search and filter function has been coded to allow users to search for a specific title either by name (using flexible validation so that "ghost" will return "Tom Clancy's Ghost Recon"), or via a selection of filters.  The filters remain in place even if the user pages forwards (in the case of more than 6 results being returned).  If no matches are found, the user receives a message encouraging them to submit their own review.
+
+#### Main Review Cards
+The main section of the home page features video game review cards.  These are Bootstrap cards which feature the game's box-art, a note of who wrote the review, the game title, a one-line summary to entice the user to click on the review, and a collection of icons so that users can easily see such information as which platform the game is available on and it's PEGI rating (used to indicate the game's suitability for different age groups).  
+There are Next and Prev buttons beneath the cards which are dynamically visible depending on which page the user is on and how many review cards are present on the page.
+
+#### Footer
+A simple footer is included with a Copyright notice and links to YouTube, LinkedIn and Github profile pages.
+
+### Review Detail Page
+A banner/masthead section is at the top with the game title, the review title, the author, and a portion of the box-art image.  
+The icons detailing certain stats/data are below the masthead to easily show the star-rating, which co-op modes the game has (i.e. couch, online or both), the PEGI rating and which platforms the game is available on (limited to Xbox, PlayStation, Nintendo and PC).  
+The main body of the review text is then displayed.  If the author is logged in, they are presented with Edit and Delete buttons which are not visible to any other user.  
+Beneath the review text is the comments section which includes a count of comments, previous user's comments, a window to submit a new comment, and if the comment writer is logged in they will also be able to see edit and delete buttons for their own comment which other users can't see.  All comments are subject to administrator approval which is confirmed by the user feedback message which appears at the top of the screen upon submission, as well as being indicated by a message alongside their comment which reads "This comment is awaiting approval".  The user can edit comments which are still pending approval.  
+Both delete buttons produce a modal window which seeks confirmation of the request to delete, before a further user feedback message is given confirming deletion.
+
+### Submit Review Page
+A form is included on this page for users to submit their own reviews.  There are mandatory and non-mandatory fields here which are designed to make the review quick and easy to submit whilst only needing the fields which the site needs to function properly.  A "missing box-art" image is included if the user does not upload one, and a copyright message is noted at the bottom of the page to ensure images are used legally.
+
+### About Page
+An about page is included to give the user more information on the background of the site creator, and includes an image as well as a collaboration request form.  Potential collaborators are invited to contact the site creator and are provided with a confirmation message on submission.  The form is also used for other contact purposes (such as any issues with password resets).  A further message about copyrights is below the form.
+
+### Other Pages
+All other standard pages are included (those for the purpose of logging in, logging out, signing up and for password resets) and have been styled to match the rest of the site.
+
+### Admin Panel
+A Django admin panel is included for superusers to manage users, reviews, comments, responses to collaboration messages, as well as other standard Django admin sections.  The Review panel clearly displays the game title, slug (for urls), status (draft/published) and approval status, the latter of which makes it easy for the site administrator to see which reviews need to be approved.
+
+![amiresponsive screenshot](static/readme/images/siteimages/amiresponsive.jpg)  
+Full images of each page are included [here](static/readme/documents/siteimages.md)
 
 ## Database
 
-Note 11:
-"I used Code Institute's PostgreSQL database"
+I used Code Institute's PostgreSQL database.  
 
 ### Database planning
 
