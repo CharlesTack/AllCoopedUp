@@ -120,54 +120,112 @@ Full images of each page are included [here](static/readme/documents/siteimages.
 I used Code Institute's PostgreSQL database.  
 
 ### Database planning
-
-Note 12:
+- I used an Entity Relationship Diagram to plan my database.  
 Reference the ERD table/diagram and link an image of it.
+![all ERD models screenshot](static/readme/images/allerdmodels.jpg)
 
 ### Creating a database
-
-Note 13:
-Provide a step by step guide to how I got the database URL (i.e. submitted the form and received the link via email)
+1. Navigate to [PostgreSQL](https://dbs.ci-dbs.net/) from Code Institute.
+2. Enter your student email address in the input field provided.
+3. Click Submit.
+4. Wait while the database is created.
+5. Check your email.
+6. You now have a URL you can use to connect your app to your database.
 
 ## Deployment
-
-Note 14:
-Note the usage of Heroku and provide a link to the site.
+- The website was deployed to Heroku and can be found [here](https://all-cooped-up-12274f373445.herokuapp.com/).
 
 ### Heroku:
-
-Note 15:
-Provide some notes on Heroku along with a step by step guide on deployment.
+* Heroku is a cloud platform that lets developers create, deploy, monitor and manage apps.
+- You will need a Heroku log-in to be able to deploy a website to Heroku.
+- Once you have logged into Heroku:
+1. Click 'New' > 'Create new app'
+2. Choose a unique name, choose your region and press 'Create app'
+3. Click on 'Settings' and then 'Reveal Config Vars'
+4. Add a key of 'DISABLE_COLLECTSTATIC' with a value of '1'.
+5. Add a key of 'DATABASE_URL' - the value will be the URL you were emailed when creating your database.
+6. Add a key of 'SECRET_KEY' - the value will be any random secret key (google 'secret key generator' and use it to generate a random string of numbers, letters and characters)
+7. In your terminal, type the code you will need to install project requirements:
+- pip3 install gunicorn~=20.1
+- pip3 install -r requirements.txt
+- pip3 freeze --local > requirements.txt
+8. Create an 'env.py' file at the root directory which contains the following:
+    - import os
+    - 
+    - os.environ["DATABASE_URL"]='CI database URL'
+    - os.environ["SECRET_KEY"]=" Your secret key"
+8. Create a file at the root directory called Procfile. In this file enter: "web: gunicorn my_project.wsgi" (without the quotes)
+9. In settings.py, set DEBUG to False. 
+- YOU SHOULD ALWAYS SET DEBUG TO FALSE BEFORE DEPLOYING FOR SECURITY
+10. Add ",'.herokuapp.com' " (without the double quotes) to the ALLOWED_HOSTS list in settings.py
+11. Add, commit and push your code.
+12. Go back to Heroku, click on the 'Deploy' tab.
+13. Connect your project to GitHub.
+14. Scroll to the bottom and click 'Deploy Branch' and your project will be deployed!
 
 ### Cloning
-
-Note 16:
-Provide some notes and a step by step guide to cloning the repo via Github
+- To clone a GitHub repository:
+1. On GitHub.com, navigate to the repository you want to clone.
+2. Click the "Code" button (found above the list of files).
+3. Copy the URL for the repository.
+4. Open Git Bash or your chosen terminal.
+5. Navigate to the directory where you want to clone the repository.
+6. Type: git clone https://github.com/CharlesTack/AllCoopedUp
+7. Press Enter to create your local clone.
 
 ### Forking
+- 'Forking' the GitHub repository means creating a copy which can be viewed/changed without changing the original.
+- To fork a GitHub repository:
+1. Login to GitHub and navigate to the repository you want to fork.
+2. Click the "Fork" button (found above the Settings button).
+3. You will now have a copy of the original repository in your GitHub account.
 
-Note 17:
-Provide some notes and a step by step guide to forking the repo via Github
+_Once the project is cloned or forked, in order to run it locally, you'll need to follow these steps:_
+
+- Run the server: python3 manage.py runserver
+- Stop the app once it's loaded: CTRL+C or ⌘+C
+- Make any necessary migrations: python3 manage.py makemigrations
+- Migrate the data to the database: python3 manage.py migrate
+- Create a superuser: python3 manage.py createsuperuser
 
 ## Technologies used
-
-Note 18:
-Provide a list of all technologies used in the production of the site
+- [HTML](https://en.wikipedia.org/wiki/HTML5) was used to structure the content of the website.
+- [CSS](https://en.wikipedia.org/wiki/CSS) were used to design the layout of the website.
+- [Bootstrap](https://getbootstrap.com/) was used as a CSS framework to provide a grid structure and improve responsiveness.
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) and [Django](https://en.wikipedia.org/wiki/Django_(web_framework)) were used to build the backend review framework.
+- [GitHub](https://github.com/) was used to host the repository and version control.
+- [Heroku](https://heroku.com/) was the hosting platform.
+- [VS Code](https://code.visualstudio.com/) was the IDE.  
+_Further tools and resources used are noted in credits below_
 
 ## The use of AI
 
-Note 19:
-Provide detail on the use of AI on the project to satisfy the learning objectives.
+### AI Usage in Code Creation
+
+### AI Usage in Debugging
+
+### AI Usage in Performance and UX Improvements
+
+## Overall Reflection on AI's Role in Development
+
+### How AI Influences Workflow
+
+### AI Usage Efficience and Outcome
+
 
 ## Testing
 
 Note 20:
 Link to a separate testing file
 
-## Future plans
+## Future Plans
 
 Note 21:
 Make a note of all of the "Could-Have" user stories which weren't delivered and how and when they might be applied.  Reference back to the agile tutorial for correct terminology.
+
+## Development Diary
+
+Perhaps include the diary in attached documents?
 
 ## Credits
 
@@ -182,4 +240,4 @@ diffchecker
 
 Note 23:
 Provide a list of people I'd like to personally thank.
-NB. Remember to thank Richard and Emma.
+NB. Remember to thank Richard and Emma, Adri and the kids, Spencer and Roo.
