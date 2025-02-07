@@ -215,11 +215,15 @@ As and when bugs were discovered and registered on the project board, Copilot wa
 Copilot has been consulted on aspects of UX such as appropriate phrasing to maximise clarity and intelligibility.  As an AI tool it has automatically provided code which has intrinsic UX benefits.  One example was on the creation of code to handle alert messaging when a game title search resulted in zero reviews.  Copilot automatically provided a link to the site's "Add a Review" page, which is terrific UX.
 
 ## Overall Reflection on AI's Role in Development
+In the most appropriate way possible, here are 3 sentences from Copilot reflecting on AI's role in software development:  
+_"AI has significantly transformed software development by automating repetitive tasks, enabling developers to focus on more complex and creative aspects of their projects. It also enhances code quality and efficiency through intelligent debugging and testing tools. Additionally, AI-powered recommendations help developers quickly find relevant libraries, frameworks, and solutions, accelerating the development process."_  
+Speaking personally now, rather than in the third person, I would not have been able to undertake this project without AI.  As the "About Me" section details - I have had no previous coding knowledge or experience before undertaking the [Code Institute's](https://codeinstitute.net/) 16-week Bootcamp some 15 weeks ago.  Although I am aware that there are definite flaws in AI tools, which extend to some frankly disturbing biases, AI speeds up a coder's ability to get projects like this produced.
 
 ### How AI Influences Workflow
+Using Copilot radically changed how this project was developed.  Usage within VS Code where Copilot could view the exact code already written and make suggestions on improvements is a radical improvement on any situation without it as a pair-programmer.  Having the flexibility to interact with Copilot via the Chat window, or to direct it to specific code using Inline Chat is revolutionary.  It automates code creation, and on other projects will help with testing.  It has reduced the chances of human error, though not entirely and not without introducing some of it's own.  The main influence on workflow is that the site creator could focus on what needed to be achieved and let Copilot do the heavy lifting on how it could be achieved.
 
-### AI Usage Efficience and Outcome
-
+### AI Usage Efficiency and Outcome
+AI usage is highly efficient.  It reduces time to market whilst ensuring clarity and accuracy in code.  It allows new entrants to coding to produce full stack applications within a matter of months.
 
 ## Testing
 
