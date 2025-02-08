@@ -200,12 +200,13 @@ _Once the project is cloned or forked, in order to run it locally, you'll need t
 _Further tools and resources used are noted in credits below_
 
 ## The use of AI
-Throughout development of this site AI has been used in a multitude of ways: image creation, code generation, to provide step-by-step guides to enable the site creator to navigate through coding processes, debugging of code, code cleansing, clearing errors, and advising on suitable/positive UX language.  The AI tools have sped up each process and advanced the capabilities of the site creator.
+Throughout development of this site AI has been used in a multitude of ways: image creation, sanple game review composition, code generation, to provide step-by-step guides to enable the site creator to navigate through coding processes, debugging of code, code cleansing, clearing errors, and advising on suitable/positive UX language.  The AI tools have sped up each process and advanced the capabilities of the site creator.
 
 ### AI Usage in Code Creation
 Copilot has been predominantly used as the main AI pair-programmer on this project as it is built into VS Code.  Via Chat and Inline Chat functions, Copilot has assisted at every step of the way with every coding technology used.  Prompts have been specific and have been phrased in such as way as to enable step-by-step coding which reduced errors and fostered confidence in the site creator.  
 The Copilot code has not always been completely correct, and often not at the first (or second) attempt.  On occasion, a secondary AI (ChatGPT) has been used to reach solutions that Copilot was not achieving.  
-Although Copilot is a phenominally powerful tool in this type of project, the site creator must still understand the code being created to ensure it is correct and free of errors.  That said, Copilot also created code which the site creator had not thought of and so acted as a teacher.
+Although Copilot is a phenominally powerful tool in this type of project, the site creator must still understand the code being created to ensure it is correct and free of errors.  That said, Copilot also created code which the site creator had not thought of and so acted as a teacher.  
+Copilot was also used to create many of the gam reviews.
 
 ### AI Usage in Debugging
 Copilot has been used to help in the debugging process on this project.  Although Django automated testing was not utilised in the workspace, Copilot was used to help to understand the cause of bugs and to produce guidance on correcting the code.  Further explanations were also provided on particularly complex solutions to ensure that the resolution was fully understood.  
@@ -235,6 +236,11 @@ Link to a separate testing file
 Note 21:
 Make a note of all of the "Could-Have" user stories which weren't delivered and how and when they might be applied.  Reference back to the agile tutorial for correct terminology.
 
+Plus automated approvals
+Plus checks for usernames which contain swear words
+plus checks for whether a review already exists
+improve admin section to make comments easier and get rid of unused sections
+
 ## Development Diary
 
 Perhaps include the diary in attached documents?
@@ -244,6 +250,8 @@ Perhaps include the diary in attached documents?
 Note 22:
 Credit every tool, site and reference I've used on the project
 
+Recredit Copilot for gamne reviews
+
 Microsoft photos
 coolors
 diffchecker
@@ -252,4 +260,4 @@ diffchecker
 
 Note 23:
 Provide a list of people I'd like to personally thank.
-NB. Remember to thank Richard and Emma, Adri and the kids, Spencer and Roo.
+NB. Remember to thank Richard and Emma, Adri and the kids, Spencer and Roo.  And Rosie.
