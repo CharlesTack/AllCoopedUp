@@ -200,7 +200,9 @@ _Once the project is cloned or forked, in order to run it locally, you'll need t
 _Further tools and resources used are noted in credits below_
 
 ## The use of AI
-Throughout development of this site AI has been used in a multitude of ways: image creation, sanple game review composition, code generation, to provide step-by-step guides to enable the site creator to navigate through coding processes, debugging of code, code cleansing, clearing errors, and advising on suitable/positive UX language.  The AI tools have sped up each process and advanced the capabilities of the site creator.
+Throughout development of this site AI has been used in a multitude of ways: image creation, sample game review composition, code generation, to provide step-by-step guides to enable the site creator to navigate through coding processes, debugging of code, code cleansing, clearing errors, and advising on suitable/positive UX language.  The AI tools have sped up each process and advanced the capabilities of the site creator.  
+
+Some examples of AI usage on this project can be found [here](static/readme/documents/aisuage.md).
 
 ### AI Usage in Code Creation
 Copilot has been predominantly used as the main AI pair-programmer on this project as it is built into VS Code.  Via Chat and Inline Chat functions, Copilot has assisted at every step of the way with every coding technology used.  Prompts have been specific and have been phrased in such as way as to enable step-by-step coding which reduced errors and fostered confidence in the site creator.  
