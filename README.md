@@ -230,8 +230,23 @@ AI usage is highly efficient.  It reduces time to market whilst ensuring clarity
 
 ## Testing
 
-Note 20:
-Link to a separate testing file
+Extensive manual testing was carried out including usage of the following tools:
+- [W3C Markup Validation Service](https://validator.w3.org/) for checking HTML code.
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) for checking CSS code.
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse) within the Chrome Dev Tools to check performance, accessibility and Best Practices.
+- [JSHint](https://jshint.com/) for checking JavaScript code.
+- Code Institute's own [Python Linter](https://pep8ci.herokuapp.com/) for checking Python PEP8 compliance.
+- [Flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8) VS Code extension as an additional Python Linter.
+
+Further testing carried out:
+- User testing by 5x user testers
+- Ad hoc code testing throughout the development
+- Full batch of manual tests (see table in [testing](static/readme/documents/testing.md))
+
+Details of tests and images of test results can be found [here](static/readme/documents/testing.md).
+
+### A Note On Automated Testing
+Although automated testing is available within Django and has been used on previous projects, as this requirement was removed from the project scope it has not been included within this project.  Inclusion of automated testing is planned for future site development as seen in the section immediately below.
 
 ## Future Plans
 
@@ -260,6 +275,7 @@ Credit CI tutorial and the guy who did it
 Microsoft photos
 coolors
 diffchecker
+tool to convert excel
 
 ## Acknowledgements
 
