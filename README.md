@@ -38,7 +38,7 @@ _Tasks:_
 
 ### Wireframes
 
-A full set of wireframes were created to display the design for each and every page in the site.
+A full set of wireframes were created in [Balsamiq](https://balsamiq.com/) to display the design for each and every page in the site.
 
 For example:  
 ## index.html:  
@@ -237,6 +237,7 @@ Note 21:
 Make a note of all of the "Could-Have" user stories which weren't delivered and how and when they might be applied.  Reference back to the agile tutorial for correct terminology.
 
 Plus automated approvals
+Plus automated testing
 Plus checks for usernames which contain swear words
 plus checks for whether a review already exists
 improve admin section to make comments easier and get rid of unused sections
@@ -251,6 +252,7 @@ Note 22:
 Credit every tool, site and reference I've used on the project
 
 Recredit Copilot for gamne reviews
+Credit CI tutorial and the guy who did it
 
 Microsoft photos
 coolors
