@@ -449,3 +449,16 @@ Using the Python Linter, I went through all python files and fixed problems whic
 ![env PEP8 clear](../images/testing/pythontests/envclearlintertest.jpg)
 
 **Back to the [table of contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#table-of-contents)**
+
+## Additional Testing
+Further manual tests were carried out to ensure accessibility, ease of use by a diverse group of users, responsiveness to use on different device types and to ensure compatibility with the most common browsers.
+
+### Contrast Checks
+
+
+
+### User Testing
+
+### Responsiveness
+
+### Devices/Browsers
