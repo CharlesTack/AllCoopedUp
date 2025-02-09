@@ -110,6 +110,8 @@
 | about.html               | Copyright Example Link                  | When the link is clicked it takes the user to the Wikipedia page regarding the usage of copyright in the Minecraft box art image in a new tab                                                                                                                                                                                                                                                      | Pass      | Functions as expected                                             |
 | Full site                | Intermittent Server 500 Errors          | The site should be free of intermittent Server 500 errors                                                                                                                                                                                                                                                                                                                                          | Fail      | Requires investigation (Bug 18)                                   |  
 
+**Back to the [table of contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#table-of-contents)**
+
 ## Code validators
 ### HTML
 - The [W3C Validator](https://validator.w3.org/) was used to validate the HTML.  
@@ -170,4 +172,5 @@ As the errors are all from rows 124 and 127, I must presume that they come from 
 Returned 1 “Info” alert (re trailing slash) and no errors.  
 ![password reset test](../images/testing/htmltests/passwordresettest1.jpg)  
 
+**Back to the [table of contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#table-of-contents)**
 
