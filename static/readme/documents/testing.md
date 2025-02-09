@@ -353,3 +353,94 @@ I pasted my only JavaScript code from the “review_detail.js” file into the c
 
 **Back to the [table of contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#table-of-contents)**
 
+### Python
+Code Institute's own [Python Linter](https://pep8ci.herokuapp.com/) for checking Python PEP8 compliance.  
+I first ensured that imports were in the correct order at the top of each page - those being standard library imports (e.g. from os), 3rd party imports (e.g from django), and local imports (e.g. from .models).  
+I checked and corrected any which were in the incorrect order.  
+Using the Python Linter, I went through all python files and fixed problems which were mainly caused by whitespace and lines being too long.  By the end of testing and correction the Flake8 linter extension in VS Code was showing zero "problems" in my code.  I have compiled a log of all of the errors and confirmation of clearance of errors in the table and images below.
+
+#### Python PEP8 Log:
+
+| Python page             | Imports ordered | Python Linter Test 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Python Linter Test 2       | Image of All clear |
+| ----------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | ------------------ |
+| about/admin.py          | Yes             | All clear, no errors found                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | N/A                        | Yes                |
+| about/apps.py           | Yes             | All clear, no errors found                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | N/A                        | Yes                |
+| about/forms.py          | Yes             | All clear, no errors found                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | N/A                        | Yes                |
+| about/models.py         | Yes             | 30: W292 no newline at end of file                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | All clear, no errors found | Yes                |
+| about/urls.py           | Corrected       | All clear, no errors found                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | N/A                        | Yes                |
+| about/views.py          | Yes             | 18: E501 line too long (104 > 79 characters)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | All clear, no errors found | Yes                |
+| allcoopedup/settings.py | Yes             | All clear, no errors found                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | N/A                        | Yes                |
+| allcoopedup/urls.py     | Yes             | All clear, no errors found                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | N/A                        | Yes                |
+| review/admin.py         | Corrected       | 17: W292 no newline at end of file                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | All clear, no errors found | Yes                |
+| review/apps.py          | Yes             | All clear, no errors found                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | N/A                        | Yes                |
+| review/forms.py         | Yes             | 5: E302 expected 2 blank lines, found 1<br>15: W291 trailing whitespace<br>19: W291 trailing whitespace<br>29: E501 line too long (90 > 79 characters)<br>30: E501 line too long (93 > 79 characters)<br>33: E302 expected 2 blank lines, found 1<br>40: E501 line too long (86 > 79 characters)<br>41: E501 line too long (100 > 79 characters)<br>42: E501 line too long (100 > 79 characters)<br>43: E501 line too long (83 > 79 characters)<br>44: E501 line too long (85 > 79 characters)<br>44: W292 no newline at end of file                                                                                                                                                                                                           | All clear, no errors found | Yes                |
+| review/models.py        | Yes             | 15: E122 continuation line missing indentation or outdented<br>16: E122 continuation line missing indentation or outdented<br>36: W293 blank line contains whitespace<br>40: E302 expected 2 blank lines, found 1<br>42: E122 continuation line missing indentation or outdented<br>43: E122 continuation line missing indentation or outdented<br>45: E122 continuation line missing indentation or outdented<br>46: E122 continuation line missing indentation or outdented<br>52: W293 blank line contains whitespace<br>54: W292 no newline at end of file                                                                                                                                                                                 | All clear, no errors found | Yes                |
+| review/urls.py          | Yes             | 10: E501 line too long (96 > 79 characters)<br>11: E501 line too long (102 > 79 characters)<br>12: W292 no newline at end of file                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | All clear, no errors found | Yes                |
+| review/views.py         | Yes             | 57: E501 line too long (82 > 79 characters)<br>88: E501 line too long (101 > 79 characters)<br>114: E501 line too long (80 > 79 characters)<br>116: E501 line too long (94 > 79 characters)<br>141: E261 at least two spaces before inline comment<br>141: E501 line too long (101 > 79 characters)<br>145: E261 at least two spaces before inline comment<br>146: E501 line too long (85 > 79 characters)<br>148: E501 line too long (109 > 79 characters)<br>149: E501 line too long (131 > 79 characters)<br>154: E302 expected 2 blank lines, found 1<br>171: E501 line too long (84 > 79 characters)<br>175: E302 expected 2 blank lines, found 1<br>179: E501 line too long (105 > 79 characters)<br>191: W292 no newline at end of file | All clear, no errors found | Yes                |
+| env.py                  | Yes             | 4: E501 line too long (135 > 79 characters)<br>10: E501 line too long (91 > 79 characters)<br>10: W292 no newline at end of file                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | All clear, no errors found | Yes                |  
+
+**Back to the [table of contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#table-of-contents)**
+
+#### Individual Images:
+
+**about/admin.py**
+
+![about admin PEP8 clear](../images/testing/pythontests/aboutadminclearlintertest.jpg)
+
+**about/apps.py**
+
+![about apps PEP8 clear](../images/testing/pythontests/aboutappsclearlintertest.jpg)
+
+**about/forms.py**
+
+![about forms PEP8 clear](../images/testing/pythontests/aboutformsclearlintertest.jpg)
+
+**about/models.py**
+
+![about models PEP8 clear](../images/testing/pythontests/aboutmodelsclearlintertest.jpg)
+
+**about/urls.py**
+
+![about urls PEP8 clear](../images/testing/pythontests/abouturlsclearlintertest.jpg)
+
+**about/views.py**
+
+![about views PEP8 clear](../images/testing/pythontests/aboutviewsclearlintertest.jpg)
+
+**allcoopedup/settings.py**
+
+![acu settings PEP8 clear](../images/testing/pythontests/allcoopedupsettingsclearlintertest.jpg)
+
+**allcoopedup/urls.py**
+
+![acu urls PEP8 clear](../images/testing/pythontests/allcoopedupurlsclearlintertest.jpg)
+
+**review/admin.py**
+
+![review admin PEP8 clear](../images/testing/pythontests/reviewadminclearlintertest.jpg)
+
+**review/apps.py**
+
+![review apps PEP8 clear](../images/testing/pythontests/reviewappsclearlintertest.jpg)
+
+**review/forms.py**
+
+![review forms PEP8 clear](../images/testing/pythontests/reviewformsclearlintertest.jpg)
+
+**review/models.py**
+
+![review models PEP8 clear](../images/testing/pythontests/reviewmodelsclearlintertest.jpg)
+
+**review/urls.py**
+
+![review urls PEP8 clear](../images/testing/pythontests/reviewurlsclearlintertest.jpg)
+
+**review/views.py**
+
+![review views PEP8 clear](../images/testing/pythontests/reviewviewsclearlintertest.jpg)
+
+**env.py**
+
+![env PEP8 clear](../images/testing/pythontests/envclearlintertest.jpg)
+
+**Back to the [table of contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#table-of-contents)**
