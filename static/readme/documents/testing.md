@@ -278,7 +278,7 @@ I pasted my only JavaScript code from the “review_detail.js” file into the c
 **Test 9:** about.html(MOBILE)
 - Performance 68.  Mainly impacted by the size of my profile image.  Will resize to improve score.
 - Accessibility 95.  Caused by contrast ratio again.
-- Best Practices 57.
+- Best Practices 57.  
 (Apologies - screenshot missing)
 
 **Test 10 (post-fix):** about.html(MOBILE)

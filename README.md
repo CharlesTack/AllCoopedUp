@@ -6,13 +6,49 @@ Full Stack Co-operative Video Game Review Site
 #### A note on the name
 _"All Cooped Up"_ is play on words relating to the site's purpose being to review co-operatively played games.  It also harks back to Covid-19 lockdowns where there was an large increase in the numbers of people playing video games together online whilst they were "cooped up" at home. 
 
-## User experience
+## Table of Contents:
+
+- [User Experience](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#user-experience)
+- [Agile Methodology](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#agile-methodology)
+    - [User Stories](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#user-stories)
+- [Design](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#design)
+    - [Wireframes](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#wireframes)
+    - [Colour Scheme](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#colour-scheme)
+    - [Typography](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#typography)
+    - [Images](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#images)
+- [Features](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#features)
+    - [Home Page](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#home-page)
+    - [Review Detail Page](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#review-detail-page)
+    - [Submit Review Page](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#submit-review-page)
+    - [About Page](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#about-page)
+    - [Other Pages](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#other-pages)
+    - [Admin Panel](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#admin-panel)
+    - [Am I Responsive Views](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#am-i-responsive-views)
+- [Database](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#database)
+- [Deployment](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#deployment)
+    - [Heroku](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#heroku)
+    - [Cloning](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#cloning)
+    - [Forking](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#forking)
+- [Technologies Used](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#technologies-used)
+- [The Use of AI](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#the-use-of-ai)
+    - [AI Usage in Code Creation](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#ai-usage-in-code-creation)
+    - [AI Usage in Debugging](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#ai-usage-in-debugging)
+    - [AI Usage in Performance and UX Improvements](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#ai-usage-in-performance-and-ux-improvements)
+- [Overall Reflection on AI's Role in Development](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#overall-reflection-on-ais-role-in-development)
+- [Testing](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#testing)
+- [Future Plans](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#future-plans)
+- [Development Diary](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#development-diary)
+- [Credits](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#credits)
+- [Acknowledgements](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#acknowledgements)
+
+
+## User Experience
 ### Purpose
 - All Cooped Up is designed for lovers of co-op games.
 - The site has been deployed with a selection of reviews, but users are encouraged to contribute their own reviews to help other users pick the best games to play.
 - Filters are available and easy to use so that users can specify a number of factors to limit the number of reviews being presented to them.
 
-## Agile methodology
+## Agile Methodology
 - Agile methodology is "a set of methods and practices where solutions evolve through collaboration between self-organizing, cross-functional teams" ([reference](https://www.agilealliance.org/agile-essentials/)).
 - A project board was set-up to keep track of user stories. Each user story was assigned a 'MoSCoW' prioritisation (must have, should have, could have, won't have) tag. The board can be found [here](https://github.com/users/CharlesTack/projects/16).
 - The project board also includes columns for bugs which are open and those which have been closed.
@@ -41,7 +77,7 @@ _Tasks:_
 A full set of wireframes were created in [Balsamiq](https://balsamiq.com/) to display the design for each and every page in the site.
 
 For example:  
-## index.html:  
+#### index.html:  
 ![index screenshot](static/readme/images/wireframes/index.jpg)
 
 Screenshots of all wireframes are [here](static/readme/documents/wireframes.md)
