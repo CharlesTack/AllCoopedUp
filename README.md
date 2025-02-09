@@ -220,6 +220,7 @@ Copilot has been consulted on aspects of UX such as appropriate phrasing to maxi
 
 ## Overall Reflection on AI's Role in Development
 In the most appropriate way possible, here are 3 sentences from Copilot reflecting on AI's role in software development:  
+
 _"AI has significantly transformed software development by automating repetitive tasks, enabling developers to focus on more complex and creative aspects of their projects. It also enhances code quality and efficiency through intelligent debugging and testing tools. Additionally, AI-powered recommendations help developers quickly find relevant libraries, frameworks, and solutions, accelerating the development process."_  
 
 Speaking personally now, rather than in the third person, I would not have been able to undertake this project without AI.  As the "About Me" section details - I have had no previous coding knowledge or experience before undertaking the [Code Institute's](https://codeinstitute.net/) 16-week Bootcamp some 15 weeks ago.  Although I am aware that there are definite flaws in AI tools, which extend to some frankly disturbing biases, AI speeds up a coder's ability to get projects like this produced.
