@@ -6,6 +6,8 @@
 
 - [Manual Testing](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#manual-testing)
 - [HTML Code Validation](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#html)
+- [CSS Code Validation](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#css)
+- [JavaScript Code Validation](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#javascript)
 
 ## Manual testing
 - Extensive manual testing was carried out on the local and deployed sites.  
@@ -173,4 +175,162 @@ Returned 1 “Info” alert (re trailing slash) and no errors.
 ![password reset test](../images/testing/htmltests/passwordresettest1.jpg)  
 
 **Back to the [table of contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#table-of-contents)**
+
+### CSS
+- The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate the CSS.  
+
+I copied and pasted my style.css code into the “By direct input” field and the check came back free of errors.  
+![css test](../images/testing/csstests/styletest1.png)  
+
+**Back to the [table of contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#table-of-contents)**
+
+### Javascript
+- The [JSHint Validator](https://jshint.com/) was used to validate the JavaScript.  
+
+I pasted my only JavaScript code from the “review_detail.js” file into the checker and it came back with 35 warnings regarding ES6, but no errors.  
+![javascript test](../images/testing/jstests/jstest1.png)
+
+**Back to the [table of contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#table-of-contents)**
+
+### Lighthouse
+- The [Lighthouse](https://developer.chrome.com/docs/lighthouse) within the Chrome Dev Tools to check performance, accessibility and Best Practices.  I tested each page first in mobile and then in desktop device mode.
+
+#### Table of Lighthouse Results:
+
+| Page                | Device  | Performance | Accessibility | Best Practices |
+| ------------------- | ------- | ----------- | ------------- | -------------- |
+| index.html          | Mobile  | 77          | 100           | 57             |
+| index.html          | Desktop | 99          | 100           | 56             |
+| review_detail.html  | Mobile  | 91          | 100           | 57             |
+| review_detail.html  | Desktop | 99          | 100           | 56             |
+| submit_review.html  | Mobile  | 85          | 92            | 96             |
+| submit_review.html  | Desktop | 98          | 92            | 100            |
+| about.html          | Mobile  | 99          | 96            | 59             |
+| about.html          | Desktop | 100         | 96            | 59             |
+| logout.html         | Mobile  | 94          | 100           | 96             |
+| logout.html         | Desktop | 97          | 100           | 100            |
+| login.html          | Mobile  | 88          | 86            | 96             |
+| login.html          | Desktop | 97          | 92            | 100            |
+| signup.html         | Mobile  | 86          | 96            | 96             |
+| signup.html         | Desktop | 100         | 96            | 100            |
+| password_reset.html | Mobile  | 97          | 95            | 96             |
+| password_reset.html | Desktop | 99          | 96            | 100            |
+
+#### Individual Test Results:
+
+**Test 1:** index.html (MOBILE)
+- Performance: 74.  Suggestions for improvement are to use modern image file types.
+- Accessibility: 92.  Suggestions for improvement are to give discernible names to links and select elements.
+- Best Practices 57. Mostly issues around use of Cloudinary.  I can focus on improving the performance and accessibility figures as I can have little impact on the Best Practices one.  Converted all images to WebP and added discernible names to links and select elements.  
+
+![index test 1](../images/testing/lighthousetests/indexmobiletest1.jpg)
+
+**Test 2 (post-fix):** index.html (MOBILE)
+- Performance 77.  Even with the image files converted and now tiny (largest file is now 52k) I can’t get this higher than 77 mostly due to the lost potential savings (980ms) from using Font Awesome, Bootstrap, Heroku and Google Fonts.
+- Accessibility 100.  Adding the aria-labels returned a perfect score.
+- Best Practices 57. Cannot be improved.  
+
+![index mobile test 2](../images/testing/lighthousetests/indexmobiletest2.jpg)
+
+**Test 3:** index.html (DESKTOP)
+- Performance 99.
+- Accessibility 100.
+- Best Practices 56.  
+
+![index desktop test 1](../images/testing/lighthousetests/indexdesktoptest2.jpg)
+
+**Test 4:** review_detail.html(MOBILE)
+- Performance 92.  Happy with performance, especially as this is mobile.
+- Accessibility 98.  Accessibility score can be improved by changing a heading from h3 to h2.
+- Best Practices 57.  
+
+![review detail mobile test 1](../images/testing/lighthousetests/reviewdetailmobiletest1.jpg)
+
+**Test 5 (post-fix):** review_detail.html(MOBILE)
+- Performance 91.
+- Accessibility 100.
+- Best Practices 57.  
+
+![review detail mobile test 2](../images/testing/lighthousetests/reviewdetailmobiletest2.jpg)
+
+**Test 6:** review_detail.html(DESKTOP)
+- Performance 99.
+- Accessibility 100.
+- Best Practices 56.  
+
+![review detail desktop test 1](../images/testing/lighthousetests/reviewdetaildesktoptest1.jpg)
+
+**Test 7:** submit_review.html(MOBILE)
+- Performance 85.  Seems to be being caused by the same sources which were causing issues in the index.html page, so cannot be resolved.
+- Accessibility 92.  Unfortunately on this occasion the score cannot be improved either.  It states that there is insufficient contrast ratio between the background and foreground colours, but as I have already fully tested this in a separate contrast checker, I am confident that the contrast ratio is more than acceptable.  The other potential correction is around the frame or iframe element not having a title, but as this is associated with the Summernote widget I cannot impact it.
+- Best Practices 96.  
+
+![submit review mobile test 1](../images/testing/lighthousetests/submitreviewmobiletest1.jpg)
+
+**Test 8:** submit_review.html(DESKTOP)
+- Performance 98.
+- Accessibility 92.
+- Best Practices 100.  
+
+![submit review desktop test 1](../images/testing/lighthousetests/submitreviewdesktoptest1.jpg)
+
+**Test 9:** about.html(MOBILE)
+- Performance 68.  Mainly impacted by the size of my profile image.  Will resize to improve score.
+- Accessibility 95.  Caused by contrast ratio again.
+- Best Practices 57.
+(Apologies - screenshot missing)
+
+**Test 10 (post-fix):** about.html(MOBILE)
+- Performance 99.
+- Accessibility 96.
+- Best Practices 59.  
+
+![about mobile test 2](../images/testing/lighthousetests/aboutmobiletest2.jpg)
+
+**Test 11:** about.html(DESKTOP).
+- Performance 100.
+- Accessibility 96.
+- Best Practices 59.  
+
+![about desktop test 1](../images/testing/lighthousetests/aboutdesktoptest1.jpg)
+
+**Test 12:** logout.html(MOBILE).
+- Performance 94.
+- Accessibility 100.
+- Best Practices 96.
+
+**Test 13:** logout.html(DESKTOP).
+- Performance 97.
+- Accessibility 100.
+- Best Practices 100.
+
+**Test 14:** login.html(MOBILE).
+- Performance 88.  Dropped points mainly from causes seen in Test 1.
+- Accessibility 86.  Due to contrast ratio, as mentioned in Test 7.
+- Best Practices 96.
+
+**Test 15:** login.html(DESKTOP).
+- Performance 97.
+- Accessibility 92.
+- Best Practices 100.
+
+**Test 16:** signup.html(MOBILE).
+- Performance 86.  Dropped points mainly from causes seen in Test 1.
+- Accessibility 96.  Due to contrast ratio, as mentioned in Test 7.
+- Best Practices 96.
+
+**Test 17:** signup.html(DESKTOP).
+- Performance 100.
+- Accessibility 96.
+- Best Practices 100.
+
+**Test 18:** password_reset.html(MOBILE).
+- Performance 97.
+- Accessibility 95.
+- Best Practices 96.
+
+**Test 19:** password_reset.html(DESKTOP).
+- Performance 99.
+- Accessibility 95.
+- Best Practices 100.
 
