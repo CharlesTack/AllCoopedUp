@@ -2,6 +2,11 @@
 
 - Manual testing was carried out throughout the development of the website and bugs fixed as they arose. 
 
+## Table of Contents:
+
+- [Manual Testing](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#manual-testing)
+- [HTML Code Validation](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#html)
+
 ## Manual testing
 - Extensive manual testing was carried out on the local and deployed sites.  
 
