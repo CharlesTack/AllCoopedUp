@@ -9,6 +9,11 @@
 - [CSS Code Validation](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#css)
 - [JavaScript Code Validation](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#javascript)
 - [Lighthouse](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#lighthouse)
+    - [Table of Results](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#table-of-lighthouse-results)
+    - [Individual Test Results](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#individual-test-results)
+- [Python](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#python)
+    - [Python PEP8 Log](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#python)
+    - [Individual Images](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#individual-images)
 
 ## Manual testing
 - Extensive manual testing was carried out on the local and deployed sites.  
