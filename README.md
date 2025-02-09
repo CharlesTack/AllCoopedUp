@@ -238,6 +238,7 @@ Make a note of all of the "Could-Have" user stories which weren't delivered and 
 
 Plus automated approvals
 Plus automated testing
+Enter game title validation so that users are alerted about existing reviews for a game before trying to submit a new one.
 Plus checks for usernames which contain swear words
 plus checks for whether a review already exists
 improve admin section to make comments easier and get rid of unused sections

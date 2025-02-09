@@ -33,7 +33,7 @@ class ReviewForm(forms.ModelForm):
             'featured_image', 'full_review',
         ]
         labels = {
-            'index_excerpt': 'One line teaser for the home page',
+            'index_excerpt': 'One line teaser/comment for the home page',
             'pegi_rating': 'PEGI rating',
             'featured_image': 'Image (Please see copyright notice below)',
         }
