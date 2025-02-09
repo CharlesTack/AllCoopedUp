@@ -8,6 +8,7 @@
 - [HTML Code Validation](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#html)
 - [CSS Code Validation](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#css)
 - [JavaScript Code Validation](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#javascript)
+- [Lighthouse](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#lighthouse)
 
 ## Manual testing
 - Extensive manual testing was carried out on the local and deployed sites.  
@@ -297,40 +298,58 @@ I pasted my only JavaScript code from the “review_detail.js” file into the c
 **Test 12:** logout.html(MOBILE).
 - Performance 94.
 - Accessibility 100.
-- Best Practices 96.
+- Best Practices 96.  
+
+![logout mobile test 1](../images/testing/lighthousetests/logoutmobiletest1.jpg)
 
 **Test 13:** logout.html(DESKTOP).
 - Performance 97.
 - Accessibility 100.
-- Best Practices 100.
+- Best Practices 100.  
+
+![logout desktop test 1](../images/testing/lighthousetests/logoutdesktoptest1.jpg)
 
 **Test 14:** login.html(MOBILE).
 - Performance 88.  Dropped points mainly from causes seen in Test 1.
 - Accessibility 86.  Due to contrast ratio, as mentioned in Test 7.
-- Best Practices 96.
+- Best Practices 96.  
+
+![login mobile test 1](../images/testing/lighthousetests/loginmobiletest1.jpg)
 
 **Test 15:** login.html(DESKTOP).
 - Performance 97.
 - Accessibility 92.
-- Best Practices 100.
+- Best Practices 100.  
+
+![login desktop test 1](../images/testing/lighthousetests/logindesktoptest1.jpg)
 
 **Test 16:** signup.html(MOBILE).
 - Performance 86.  Dropped points mainly from causes seen in Test 1.
 - Accessibility 96.  Due to contrast ratio, as mentioned in Test 7.
-- Best Practices 96.
+- Best Practices 96.  
+
+![sign up mobile test 1](../images/testing/lighthousetests/signupmobiletest1.jpg)
 
 **Test 17:** signup.html(DESKTOP).
 - Performance 100.
 - Accessibility 96.
-- Best Practices 100.
+- Best Practices 100.  
+
+![sign up desktop test 1](../images/testing/lighthousetests/signupdesktoptest1.jpg)
 
 **Test 18:** password_reset.html(MOBILE).
 - Performance 97.
 - Accessibility 95.
-- Best Practices 96.
+- Best Practices 96.  
+
+![password reset mobile test 1](../images/testing/lighthousetests/passwordresetmobiletest1.jpg)
 
 **Test 19:** password_reset.html(DESKTOP).
 - Performance 99.
 - Accessibility 95.
-- Best Practices 100.
+- Best Practices 100.  
+
+![password reset desktop test 1](../images/testing/lighthousetests/passwordresetdesktoptest1.jpg)
+
+**Back to the [table of contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#table-of-contents)**
 

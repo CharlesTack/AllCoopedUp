@@ -112,6 +112,7 @@ All other standard pages are included (those for the purpose of logging in, logg
 ### Admin Panel
 A Django admin panel is included for superusers to manage users, reviews, comments, responses to collaboration messages, as well as other standard Django admin sections.  The Review panel clearly displays the game title, slug (for urls), status (draft/published) and approval status, the latter of which makes it easy for the site administrator to see which reviews need to be approved.
 
+### Am I Responsive Views
 ![amiresponsive screenshot](static/readme/images/siteimages/amiresponsive.jpg)  
 Full images of each page are included [here](static/readme/documents/siteimages.md)
 
@@ -208,7 +209,7 @@ Some examples of AI usage on this project can be found [here](static/readme/docu
 Copilot has been predominantly used as the main AI pair-programmer on this project as it is built into VS Code.  Via Chat and Inline Chat functions, Copilot has assisted at every step of the way with every coding technology used.  Prompts have been specific and have been phrased in such as way as to enable step-by-step coding which reduced errors and fostered confidence in the site creator.  
 The Copilot code has not always been completely correct, and often not at the first (or second) attempt.  On occasion, a secondary AI (ChatGPT) has been used to reach solutions that Copilot was not achieving.  
 Although Copilot is a phenominally powerful tool in this type of project, the site creator must still understand the code being created to ensure it is correct and free of errors.  That said, Copilot also created code which the site creator had not thought of and so acted as a teacher.  
-Copilot was also used to create many of the gam reviews.
+Copilot was also used to create many of the game reviews.
 
 ### AI Usage in Debugging
 Copilot has been used to help in the debugging process on this project.  Although Django automated testing was not utilised in the workspace, Copilot was used to help to understand the cause of bugs and to produce guidance on correcting the code.  Further explanations were also provided on particularly complex solutions to ensure that the resolution was fully understood.  
@@ -220,6 +221,7 @@ Copilot has been consulted on aspects of UX such as appropriate phrasing to maxi
 ## Overall Reflection on AI's Role in Development
 In the most appropriate way possible, here are 3 sentences from Copilot reflecting on AI's role in software development:  
 _"AI has significantly transformed software development by automating repetitive tasks, enabling developers to focus on more complex and creative aspects of their projects. It also enhances code quality and efficiency through intelligent debugging and testing tools. Additionally, AI-powered recommendations help developers quickly find relevant libraries, frameworks, and solutions, accelerating the development process."_  
+
 Speaking personally now, rather than in the third person, I would not have been able to undertake this project without AI.  As the "About Me" section details - I have had no previous coding knowledge or experience before undertaking the [Code Institute's](https://codeinstitute.net/) 16-week Bootcamp some 15 weeks ago.  Although I am aware that there are definite flaws in AI tools, which extend to some frankly disturbing biases, AI speeds up a coder's ability to get projects like this produced.
 
 ### How AI Influences Workflow
