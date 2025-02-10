@@ -68,7 +68,9 @@ _Acceptance Criteria:_
 _Tasks:_
 - Use appropriate tools to decide on a colour scheme and ensure that rigorous contrast checking is done in the testing stage.
 - Use CSS variables to be able to quickly change colours to assist in making sure they have good contrast at the testing stage.
-- Code the HTML to use something like: alt="Image of the box art for {{ game.title }}" so that the reviewer doesn’t have to stipulate the alt text manually.
+- Code the HTML to use something like: alt="Image of the box art for {{ game.title }}" so that the reviewer doesn’t have to stipulate the alt text manually.  
+
+[Back to the Table of Contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#table-of-contents)  
 
 ## Design
 
@@ -100,7 +102,9 @@ highlight-color-light: #F093B2; (Light Pink - was Amaranth Pink, now Illusion)
 
 [Google Fonts](https://fonts.google.com/) was used to select an appropriately styled font.  The font needed to be easy to read and suitable for a video game related site.  
 Filters were applied to limit options to those tagged as "Futuristic" and "Humanist".  Of the options presented, "Ubuntu Sans" felt the most appropriate.  
-![Font Selection screenshot](static/readme/images/fontselection.png)
+![Font Selection screenshot](static/readme/images/fontselection.png)  
+
+[Back to the Table of Contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#table-of-contents)  
 
 ## Images
 
@@ -150,7 +154,9 @@ A Django admin panel is included for superusers to manage users, reviews, commen
 
 ### Am I Responsive Views
 ![amiresponsive screenshot](static/readme/images/siteimages/amiresponsive.jpg)  
-Full images of each page are included [here](static/readme/documents/siteimages.md)
+Full images of each page are included [here](static/readme/documents/siteimages.md)  
+
+[Back to the Table of Contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#table-of-contents)  
 
 ## Database
 
@@ -166,7 +172,9 @@ I used Code Institute's PostgreSQL database.
 3. Click Submit.
 4. Wait while the database is created.
 5. Check your email.
-6. You now have a URL you can use to connect your app to your database.
+6. You now have a URL you can use to connect your app to your database.  
+
+[Back to the Table of Contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#table-of-contents)  
 
 ## Deployment
 - The website was deployed to Heroku and can be found [here](https://all-cooped-up-12274f373445.herokuapp.com/).
@@ -222,7 +230,9 @@ _Once the project is cloned or forked, in order to run it locally, you'll need t
 - Stop the app once it's loaded: CTRL+C or ⌘+C
 - Make any necessary migrations: python3 manage.py makemigrations
 - Migrate the data to the database: python3 manage.py migrate
-- Create a superuser: python3 manage.py createsuperuser
+- Create a superuser: python3 manage.py createsuperuser  
+
+[Back to the Table of Contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#table-of-contents)  
 
 ## Technologies used
 - [HTML](https://en.wikipedia.org/wiki/HTML5) was used to structure the content of the website.
@@ -234,7 +244,9 @@ _Once the project is cloned or forked, in order to run it locally, you'll need t
 - [VS Code](https://code.visualstudio.com/) was the IDE.
 - [Copilot](https://copilot.microsoft.com/) was the main AI.
 - [ChatGPT](https://chatgpt.com/) was the secondary AI.  
-_Further tools and resources used are noted in credits below_
+_Further tools and resources used are noted in credits below_  
+
+[Back to the Table of Contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#table-of-contents)  
 
 ## The use of AI
 Throughout development of this site AI has been used in a multitude of ways: image creation, sample game review composition, code generation, to provide step-by-step guides to enable the site creator to navigate through coding processes, debugging of code, code cleansing, clearing errors, and advising on suitable/positive UX language.  The AI tools have sped up each process and advanced the capabilities of the site creator.  
@@ -265,7 +277,9 @@ Speaking personally now, rather than in the third person, I would not have been 
 Using Copilot radically changed how this project was developed.  Usage within VS Code where Copilot could view the exact code already written and make suggestions on improvements is a radical improvement on any situation without it as a pair-programmer.  Having the flexibility to interact with Copilot via the Chat window, or to direct it to specific code using Inline Chat is revolutionary.  It automates code creation, and on other projects will help with testing.  It has reduced the chances of human error, though not entirely and not without introducing some of it's own.  The main influence on workflow is that the site creator could focus on what needed to be achieved and let Copilot do the heavy lifting on how it could be achieved.
 
 ### AI Usage Efficiency and Outcome
-AI usage is highly efficient.  It reduces time to market whilst ensuring clarity and accuracy in code.  It allows new entrants to coding to produce full stack applications within a matter of months.
+AI usage is highly efficient.  It reduces time to market whilst ensuring clarity and accuracy in code.  It allows new entrants to coding to produce full stack applications within a matter of months.  
+
+[Back to the Table of Contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#table-of-contents)  
 
 ## Testing
 
@@ -286,7 +300,9 @@ Further testing carried out:
 Details of tests and images of test results can be found [here](static/readme/documents/testing.md).
 
 ### A Note On Automated Testing
-Although automated testing is available within Django and has been used on previous projects, as this requirement was removed from the project scope it has not been included within this project.  Inclusion of automated testing is planned for future site development as seen in the section immediately below.  The "tests.py" files have also been removed as they are presently unused.
+Although automated testing is available within Django and has been used on previous projects, as this requirement was removed from the project scope it has not been included within this project.  Inclusion of automated testing is planned for future site development as seen in the section immediately below.  The "tests.py" files have also been removed as they are presently unused.  
+
+[Back to the Table of Contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#table-of-contents)  
 
 ## Future Plans
 
@@ -305,7 +321,9 @@ There are many future plans for this site and range from fixing known minor bugs
 - Early game title validation: Users are alerted as they enter a game title into a new review if it matches an existing review to reduce the frustration of writing a review only to discover it already exists.
 - Username profanity: Signup form has additional check for usernames which contain swear words or any other offensive terms.
 - Admin panel: Optimise admin panel to remove unused elements as well as to make the comments section easier to work with.
-- Email notification: Admin receives email notification when a new review or comment is added to prompt them to validate, publish and approve.
+- Email notification: Admin receives email notification when a new review or comment is added to prompt them to validate, publish and approve.  
+
+[Back to the Table of Contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#table-of-contents)  
 
 ## Development Diary
 
@@ -333,8 +351,9 @@ Upon beginning this project a [Miro](https://miro.com/) board was used to help w
 - [Balsamiq](https://balsamiq.com/): For wireframe creation
 - [Image Color Picker](https://imagecolorpicker.com/): for when I needed to know what a colour was
 - [ChatGPT](https://chatgpt.com/) was the secondary AI.  
-- Plus all of the testing tools already mentioned in the Testing section
+- Plus all of the testing tools already mentioned in the Testing section  
 
+[Back to the Table of Contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#table-of-contents)  
 
 ## Acknowledgements
 
@@ -348,4 +367,6 @@ Roo MacArthur and Spencer Barriball from Code Institute for their ad-hoc help an
 
 The Code Institute's "I think therefore I blog" or "CodeStar" tutorial (and all those who contributed to its creation) for acting as a step by step guide in the initial coding steps.  
 
-Richard Fletcher, a Bootcamp colleague who has been a constant sounding board and sanity checker (not just of my code, but of my actual sanity) throughout the project.
+Richard Fletcher, a Bootcamp colleague who has been a constant sounding board and sanity checker (not just of my code, but of my actual sanity) throughout the project.  
+
+[Back to the Table of Contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#table-of-contents)
