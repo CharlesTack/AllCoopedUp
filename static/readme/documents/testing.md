@@ -526,10 +526,11 @@ The [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) was
 **Back to the [table of contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#table-of-contents)**
 
 ### User Testing
-5 user testers were utilised at a mid-late stage of development (once the core of the site had been completed and minimum viable product had been reached).  The purpose of user testing was to gain feedback on UX and ease of use, as well as gathering bugs for logging and correction (where possible within the available deadline).  Logged bugs were given a label of "User-Feedback" in the project board and of the 6 reported, 50% have been cleared.
+5 user testers were utilised at a mid-late stage of development (once the core of the site had been completed and minimum viable product had been reached).  The purpose of user testing was to gain feedback on UX and ease of use, as well as gathering bugs for logging and correction (where possible within the available deadline).  Logged bugs were given a label of "User-Feedback" in the project board and of the 7 reported, over 50% have been cleared.
 
 | User Tester      | Feedback/Bug                                                                                                            | Bug Ref | Bug Status |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------- | ------- | ---------- |
+| Emma Lamont      | If the admin approves a review but doesn't publish it an error 404 is given to the user on clicking.                    | Bug 14  | Closed     |
 | Jon Tack         | Label for index excerpt was difficult to understand.                                                                    | Bug 19  | Closed     |
 | Adri Tack        | Excerpt for index text field was too big, which suggested more than one line needed.                                    | Bug 20  | Closed     |
 | Rosie Leonard    | Label for index excerpt was still difficult to understand.                                                              | Bug 25  | Closed     |
