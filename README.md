@@ -109,12 +109,14 @@ Filters were applied to limit options to those tagged as "Futuristic" and "Human
 ## Images
 
 All review "box-art" images were sourced from [wikipedia](https://www.wikipedia.org/) due to their position on copyright (an example of which can be found [here](https://en.wikipedia.org/wiki/File:Minecraft_2024_cover_art.png)).  
-The site logo, which is used in the navbar, was created using Copilot.  The initial image was unusable in it's original form and so processing to crop and change the background colour was done using the integrated editting tools in the Microsoft Photos app.  
+The site logo, which is used in the navbar, was created using Copilot.  The initial image was unusable in it's original form and so processing to crop and change the background colour was done using the integrated editing tools in the Microsoft Photos app.  
 Before and after images are included below:  
 ![logo initial](static/readme/images/copilotlogo1small.jpg)
 ![logo final](static/readme/images/copilotlogocroppedwhite.jpg)
 
 ## Features:
+
+Full images of each page including the features mentioned below are [here](static/readme/documents/siteimages.md)  
 
 ### Home Page:
 The home page is the index of all of the reviews on the site.  It comprises 6 review cards per page which are vertically stacked on mobile devices and 3x2 on tablet sized screens and larger.  It features a navbar, a search/filters section, the main review card section, and a footer.  Via the use of a base.html file, the navbar and footer are visible from each subsequent page.
@@ -154,7 +156,7 @@ A Django admin panel is included for superusers to manage users, reviews, commen
 
 ### Am I Responsive Views
 ![amiresponsive screenshot](static/readme/images/siteimages/amiresponsive.jpg)  
-Full images of each page are included [here](static/readme/documents/siteimages.md)  
+A reminder, full images of each page are included [here](static/readme/documents/siteimages.md)  
 
 [Back to the Table of Contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#table-of-contents)  
 
@@ -298,9 +300,6 @@ Further testing carried out:
 - Full batch of manual tests (see table in [testing](static/readme/documents/testing.md))
 
 Details of tests and images of test results can be found [here](static/readme/documents/testing.md).
-
-### A Note On Automated Testing
-Although automated testing is available within Django and has been used on previous projects, as this requirement was removed from the project scope it has not been included within this project.  Inclusion of automated testing is planned for future site development as seen in the section immediately below.  The "tests.py" files have also been removed as they are presently unused.  
 
 [Back to the Table of Contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#table-of-contents)  
 
