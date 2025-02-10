@@ -523,7 +523,62 @@ The [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) was
 **Back to the [table of contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#table-of-contents)**
 
 ### User Testing
+5 user testers were utilised at a mid-late stage of development (once the core of the site had been completed and minimum viable product had been reached).  The purpose of user testing was to gain feedback on UX and ease of use, as well as gathering bugs for logging and correction (where possible within the available deadline).  Logged bugs were given a label of "User-Feedback" in the project board and of the 6 reported, 50% have been cleared.
+
+| User Tester      | Feedback/Bug                                                                                                            | Bug Ref | Bug Status |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------- | ------- | ---------- |
+| Jon Tack         | Label for index excerpt was difficult to understand.                                                                    | Bug 19  | Closed     |
+| Adri Tack        | Excerpt for index text field was too big, which suggested more than one line needed.                                    | Bug 20  | Closed     |
+| Rosie Leonard    | Label for index excerpt was still difficult to understand.                                                              | Bug 25  | Closed     |
+| Jon Tack         | Username needs to be a single word without spaces.  Lable and alert to user could be clearer.                           | Bug 21  | Open       |
+| Izzy Tack        | User can select a font in main review text which carries over to the published review and overwrites default site font. | Bug 22  | Open       |
+| Richard Fletcher | Password reset process is broken and can result in unstyled pages being seen by users.                                  | Bug 24  | Open       |
+
+**Back to the [table of contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#table-of-contents)**
 
 ### Responsiveness
 
+![am i responsive image](../images/siteimages/amiresponsive.jpg)
+
+The site was tested on different sized devices using actual physical devices as well as emulated versions within Google Chrome Dev Tools.  
+On the emulated versions, the site is fully responsive across all device size break points, those being:  
+- Mobile S (width 320px)
+- Mobile M (width 375px)
+- Mobile L (width 425px)
+- Tablet (width 768px)
+- Laptop (width 1024px)
+- Laptop L (width 1440px)
+- 4K (width 2560px)
+
+The site's responsiveness matches the wireframe designs and reacts as anticipated to different widths.  Of particular note:  
+- Mobile S/M/L - the index page review cards stack vertically and the nevbar collapses into a burger menu
+- Tablets and larger - the index page review cards are arranged 3x2 and the navbar is fully displayed
+
+A couple of examples:
+
+**Mobile Navbar**  
+![mobile top](../images/testing/responsiveness/mobileviewtop.jpg)  
+
+**Mobile Body**  
+![mobile body](../images/testing/responsiveness/mobileview.jpg)
+
+**Tablet Body**  
+![tablet body](../images/testing/responsiveness/tabletview.jpg)
+
 ### Devices/Browsers
+
+User testing also allowed a double purpose of different browsers and devices being tested too.  The device & browser combinations tested were:
+
+| Device                            | Browser        |
+| --------------------------------- | -------------- |
+| Desktop PC with Ultrawide Monitor | Google Chrome  |
+| Laptop with 13" Screen            | Microsoft Edge |
+| Samsung Galaxy Note 10            | Google Chrome  |
+| Samsung Galaxy S20FE              | Google Chrome  |
+| Samsung Galaxy Tab S8             | Google Chrome  |
+| Apple iPad                        | Safari         |
+| Apple iPhone                      | Safari         |
+
+All device & browser tests were successfully passed without issue.
+
+**Back to the [table of contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#table-of-contents)**
