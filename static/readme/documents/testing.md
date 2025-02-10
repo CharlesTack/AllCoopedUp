@@ -17,6 +17,9 @@
 - [Contrast Checks](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#contrast-checks)
     - [Contrast Check Results Table](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#contrast-checks)
     - [Contrast Check Individual Results](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#contrast-check-individual-results)
+- [User Testing](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#user-testing)
+- [Responsiveness](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#responsiveness)
+- [Device/Browser Testing](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#responsiveness)
 
 ## Manual testing
 - Extensive manual testing was carried out on the local and deployed sites.  
