@@ -286,41 +286,66 @@ Further testing carried out:
 Details of tests and images of test results can be found [here](static/readme/documents/testing.md).
 
 ### A Note On Automated Testing
-Although automated testing is available within Django and has been used on previous projects, as this requirement was removed from the project scope it has not been included within this project.  Inclusion of automated testing is planned for future site development as seen in the section immediately below.
+Although automated testing is available within Django and has been used on previous projects, as this requirement was removed from the project scope it has not been included within this project.  Inclusion of automated testing is planned for future site development as seen in the section immediately below.  The "tests.py" files have also been removed as they are presently unused.
 
 ## Future Plans
 
-Note 21:
-Make a note of all of the "Could-Have" user stories which weren't delivered and how and when they might be applied.  Reference back to the agile tutorial for correct terminology.
+There are many future plans for this site and range from fixing known minor bugs to adding significant functionality.
 
-Plus automated approvals
-Plus automated testing
-Enter game title validation so that users are alerted about existing reviews for a game before trying to submit a new one.
-Plus checks for usernames which contain swear words
-plus checks for whether a review already exists
-improve admin section to make comments easier and get rid of unused sections
-add email notifications to admin on new reviews and comments
+**Could-Have User Stories**  
+- Additional ratings: Users can add their own 5-star rating to already reviewed games
+- Game wish/play lists: Users can add games to a custom list to remind them which games they're interested in playing
+- Additional filters: Extra filters to help users narrow down reviews further, including by subscription, cross-play availability, game genre, and play style.
+- Social media registration/login: Users can register and login using common social media accounts, such as Google and Facebook.
+- Image automation: Rather than the user or admin having to source a copyright free image, an image is automatically linked to each review via API.
+
+**Other future plans**  
+- Automated approvals: Comments and reviews are validated and approved/published without admin interaction.
+- Automated testing: Django automated testing is done to improve the testing process for additional development.
+- Early game title validation: Users are alerted as they enter a game title into a new review if it matches an existing review to reduce the frustration of writing a review only to discover it already exists.
+- Username profanity: Signup form has additional check for usernames which contain swear words or any other offensive terms.
+- Admin panel: Optimise admin panel to remove unused elements as well as to make the comments section easier to work with.
+- Email notification: Admin receives email notification when a new review or comment is added to prompt them to validate, publish and approve.
 
 ## Development Diary
 
-Perhaps include the diary in attached documents?
+Upon beginning this project a [Miro](https://miro.com/) board was used to help with the ideation and planning phase of the development.  This visual way of plotting out thoughts and ideas worked very well, but was quickly replaced by a more text-based development diary in Microsoft Word from Day 4 of development onwards (although both tools were used simultaneously for many days more).  The development diary has worked well as a "thinking out loud" tool, and helped organise thoughts whilst also keeping track of what was done and when.  It's not a minute by minute log of everything (every Copilot interaction or bug found), but also not far from it.  The diary ballooned to nearly 10,000 words and nearly 50 pages.  A link to the diary is within this repository should you wish to view it (click the link [here](/static/readme/documents/Development%20Diary.docx) and then click the download button).
 
 ## Credits
 
-Note 22:
-Credit every tool, site and reference I've used on the project
-
-Recredit Copilot for gamne reviews
-Credit CI tutorial and the guy who did it
-
-Microsoft photos
-coolors
-diffchecker
-tool to convert excel (https://tabletomarkdown.com/)
+- [Microsoft Copilot](https://copilot.microsoft.com/): Primary AI, pair-programmer, UX consultant and game reviewer
+- [Microsoft Photos](https://www.microsoft.com/en-gb/windows/tips/photos-app) app: Image conversion & editing
+- [Microsoft Excel](https://www.microsoft.com/en-gb/microsoft-365/excel): For multiple spreadsheet purposes (testing logs, ERD tables, etc.)
+- [Microsoft Word](https://www.microsoft.com/en-gb/microsoft-365/word): FOr the Development Diary
+- [VS Code](https://code.visualstudio.com/): Code editor, workspace/IDE
+- [Github](https://github.com/): Repository
+- [Heroku](https://heroku.com/): Hosting & Cloud Deployment
+- [Chrome Dev Tools](https://developer.chrome.com/docs/devtools): For code inspection, responsiveness and Lighthouse testing
+- [coolors](https://coolors.co/): Colour scheme generator
+- [Diffchecker](https://www.diffchecker.com/): Frequent checks so see where two pieces of nesar identical code differed
+- [tabletomarkdown](https://tabletomarkdown.com/): Tool to convert Excel sheets to markdown language for this ReadMe
+- [Miro](https://miro.com/): Project ideation tool
+- [Google Fonts](https://fonts.google.com/): for selection of font as well as the font itself
+- [Font Awesome](https://fontawesome.com/): for the footer icons
+- [Favicon.io](https://favicon.io/): For the conversion of the logo into a Favicon
+- [Emojipedia](https://emojipedia.org/): for the star in the star-reviews
+- [Wikipedia](https://www.wikipedia.org/): For the review box-art images
+- [Balsamiq](https://balsamiq.com/): For wireframe creation
+- [Image Color Picker](https://imagecolorpicker.com/): for when I needed to know what a colour was
+- [ChatGPT](https://chatgpt.com/) was the secondary AI.  
+- Plus all of the testing tools already mentioned in the Testing section
 
 
 ## Acknowledgements
 
-Note 23:
-Provide a list of people I'd like to personally thank.
-NB. Remember to thank Richard and Emma, Adri and the kids, Spencer and Roo.  And Rosie.
+I'd like to personally thank:  
+
+The user testers:  
+Adri Tack, Jon Tack, Izzy Tack, Rosie Leonard and Emma Lamont.  
+
+Emma Lamont, our Code Institute Bootcamp Facilitator for her ongoing support, frequent check-ins, and super helpful suggestions such as using Emojis for the star ratings.  
+Roo MacArthur and Spencer Barriball from Code Institute for their ad-hoc help and support when I most needed it on this and previous projects.  
+
+The Code Institute's "I think therefore I blog" or "CodeStar" tutorial (and all those who contributed to its creation) for acting as a step by step guide in the initial coding steps.  
+
+Richard Fletcher, a Bootcamp colleague who has been a constant sounding board and sanity checker (not just of my code, but of my actual sanity) throughout the project.
