@@ -350,7 +350,8 @@ Upon beginning this project a [Miro](https://miro.com/) board was used to help w
 - [Wikipedia](https://www.wikipedia.org/): For the review box-art images
 - [Balsamiq](https://balsamiq.com/): For wireframe creation
 - [Image Color Picker](https://imagecolorpicker.com/): for when I needed to know what a colour was
-- [ChatGPT](https://chatgpt.com/) was the secondary AI.  
+- [ChatGPT](https://chatgpt.com/): The secondary AI.
+- [Cloudinary](https://cloudinary.com/): Image uploads are hosted here
 - Plus all of the testing tools already mentioned in the Testing section  
 
 [Back to the Table of Contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/README.md#table-of-contents)  
