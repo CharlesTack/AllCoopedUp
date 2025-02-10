@@ -276,6 +276,7 @@ Extensive manual testing was carried out including usage of the following tools:
 - [JSHint](https://jshint.com/) for checking JavaScript code.
 - Code Institute's own [Python Linter](https://pep8ci.herokuapp.com/) for checking Python PEP8 compliance.
 - [Flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8) VS Code extension as an additional Python Linter.
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) to ensure contrast and colour accessibility.
 
 Further testing carried out:
 - User testing by 5x user testers
@@ -298,6 +299,7 @@ Enter game title validation so that users are alerted about existing reviews for
 Plus checks for usernames which contain swear words
 plus checks for whether a review already exists
 improve admin section to make comments easier and get rid of unused sections
+add email notifications to admin on new reviews and comments
 
 ## Development Diary
 
@@ -315,6 +317,7 @@ Microsoft photos
 coolors
 diffchecker
 tool to convert excel (https://tabletomarkdown.com/)
+
 
 ## Acknowledgements
 

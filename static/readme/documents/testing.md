@@ -454,7 +454,58 @@ Using the Python Linter, I went through all python files and fixed problems whic
 Further manual tests were carried out to ensure accessibility, ease of use by a diverse group of users, responsiveness to use on different device types and to ensure compatibility with the most common browsers.
 
 ### Contrast Checks
+The [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) was used to check the readability of text on the site.  Each interaction of colours was noted in a table and tested, with the aim to get an overall score of over 4.5:1 (the minimum ratio for a pass).  The initially chosen colours didn't all pass, and so were given minor adjustments to keep with the same colour scheme but to increase contrast.  Results were tabulated (below).
 
+#### Contrast Check Results Table
+
+| Colour 1  | Colour 2 | Description                                                     | Contrast Ratio |
+| --------- | -------- | --------------------------------------------------------------- | -------------- |
+| #6c757d   | #FFFFFF  | "Games are best played together" - muted text over white navbar | 4.68:1         |
+| #0000008c | #FFFFFF  | Inactive Navbar link                                            | 4.74:1         |
+| #000000e6 | #FFFFFF  | Active Navbar link                                              | 17.58:1        |
+| #FFFFFF   | #2B2D42  | White text over dark blue background                            | 13.48:1        |
+| #FFFFFF   | #2C7DA5  | White text over bright blue (button, Author label, Masthead)    | 4.58:1         |
+| #FFFFFF   | #847089  | White text over Mountbatten pink (footer)                       | 4.5:1          |
+| #FFFFFF   | #188181  | Submit/Edit button                                              | 5.0:1          |
+| #FFFFFF   | #C73200  | Delete button                                                   | 5.4:1          |
+| #523e02   | #fff3cd  | Bootstrap Alert Warning (search no results)                     | 9.25:1         |
+| #d1e7dd   | #0f5132  | Bootstrap Success Alert                                         | 7.21:1         |
+| #23BBBB   | #2B2D42  | Sign In Sign up links                                           | 5.71:1         |
+
+#### Contrast Check Individual Results:
+
+- #6c757d on #FFFFFF
+![contrast test 1](../images/testing/contrast/test1.jpg)
+
+- #0000008c on #FFFFFF
+![contrast test 2](../images/testing/contrast/test2.jpg)
+
+- #000000e6 on #FFFFFF
+![contrast test 3](../images/testing/contrast/test3.jpg)
+
+- #FFFFFF  on #2B2D42
+![contrast test 4](../images/testing/contrast/test4.jpg)
+
+- #FFFFFF  on #2C7DA5
+![contrast test 5](../images/testing/contrast/test5.jpg)
+
+- #FFFFFF  on #847089
+![contrast test 6](../images/testing/contrast/test6.jpg)
+
+- #FFFFFF  on #188181
+![contrast test 7](../images/testing/contrast/test7.jpg)
+
+- #FFFFFF  on #C73200
+![contrast test 8](../images/testing/contrast/test8.jpg)
+
+- #523e02  on #fff3cd
+![contrast test 9](../images/testing/contrast/test9.jpg)
+
+- #d1e7dd  on #0f5132
+![contrast test 10](../images/testing/contrast/test10.jpg)
+
+- #23BBBB  on #2B2D42
+![contrast test 11](../images/testing/contrast/test11.jpg)
 
 
 ### User Testing
