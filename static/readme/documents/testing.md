@@ -14,6 +14,9 @@
 - [Python](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#python)
     - [Python PEP8 Log](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#python)
     - [Individual Images](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#individual-images)
+- [Contrast Checks](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#contrast-checks)
+    - [Contrast Check Results Table](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#contrast-checks)
+    - [Contrast Check Individual Results](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#contrast-check-individual-results)
 
 ## Manual testing
 - Extensive manual testing was carried out on the local and deployed sites.  
@@ -473,40 +476,51 @@ The [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) was
 | #23BBBB   | #2B2D42  | Sign In Sign up links                                           | 5.71:1         |
 
 #### Contrast Check Individual Results:
+- #6c757d on #FFFFFF  
 
-- #6c757d on #FFFFFF
 ![contrast test 1](../images/testing/contrast/test1.jpg)
 
-- #0000008c on #FFFFFF
+- #0000008c on #FFFFFF  
+
 ![contrast test 2](../images/testing/contrast/test2.jpg)
 
-- #000000e6 on #FFFFFF
+- #000000e6 on #FFFFFF  
+
 ![contrast test 3](../images/testing/contrast/test3.jpg)
 
-- #FFFFFF  on #2B2D42
+- #FFFFFF  on #2B2D42  
+
 ![contrast test 4](../images/testing/contrast/test4.jpg)
 
-- #FFFFFF  on #2C7DA5
+- #FFFFFF  on #2C7DA5  
+
 ![contrast test 5](../images/testing/contrast/test5.jpg)
 
-- #FFFFFF  on #847089
+- #FFFFFF  on #847089  
+
 ![contrast test 6](../images/testing/contrast/test6.jpg)
 
-- #FFFFFF  on #188181
+- #FFFFFF  on #188181  
+
 ![contrast test 7](../images/testing/contrast/test7.jpg)
 
-- #FFFFFF  on #C73200
+- #FFFFFF  on #C73200  
+
 ![contrast test 8](../images/testing/contrast/test8.jpg)
 
-- #523e02  on #fff3cd
+- #523e02  on #fff3cd  
+
 ![contrast test 9](../images/testing/contrast/test9.jpg)
 
-- #d1e7dd  on #0f5132
+- #d1e7dd  on #0f5132  
+
 ![contrast test 10](../images/testing/contrast/test10.jpg)
 
-- #23BBBB  on #2B2D42
+- #23BBBB  on #2B2D42  
+
 ![contrast test 11](../images/testing/contrast/test11.jpg)
 
+**Back to the [table of contents](https://github.com/CharlesTack/AllCoopedUp/blob/main/static/readme/documents/testing.md#table-of-contents)**
 
 ### User Testing
 
