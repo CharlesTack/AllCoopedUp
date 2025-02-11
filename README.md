@@ -1,7 +1,10 @@
-# AllCoopedUp
+# All Cooped Up
 Full Stack Co-operative Video Game Review Site  
 ![Homepage screenshot](static/readme/images/indexpageoverview.jpg)
 - Deployed project can be found [here](https://all-cooped-up-12274f373445.herokuapp.com/) (right-click to open in a new tab).
+
+## Alert
+An occasional intermittent Server Error (500) is occasionally occuring on the deployed site.  This will be fully investigated and resolved, but should you experience the error please refresh your browser page.  Any submissions (such as comments and reviews) will have been processed and confirmation of such should be near the top of the screen.
 
 #### A note on the name
 _"All Cooped Up"_ is play on words relating to the site's purpose being to review co-operatively played games.  It also harks back to Covid-19 lockdowns where there was an large increase in the numbers of people playing video games together online whilst they were "cooped up" at home. 
@@ -241,6 +244,7 @@ _Once the project is cloned or forked, in order to run it locally, you'll need t
 - [CSS](https://en.wikipedia.org/wiki/CSS) were used to design the layout of the website.
 - [Bootstrap](https://getbootstrap.com/) was used as a CSS framework to provide a grid structure and improve responsiveness.
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) and [Django](https://en.wikipedia.org/wiki/Django_(web_framework)) were used to build the backend review framework.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used for Delete and Edit button functionality.
 - [GitHub](https://github.com/) was used to host the repository and version control.
 - [Heroku](https://heroku.com/) was the hosting platform.
 - [VS Code](https://code.visualstudio.com/) was the IDE.
