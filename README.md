@@ -1,13 +1,13 @@
 # All Cooped Up
 Full Stack Co-operative Video Game Review Site  
 ![Homepage screenshot](static/readme/images/indexpageoverview.jpg)
-- Deployed project can be found [here](https://all-cooped-up-12274f373445.herokuapp.com/) (right-click to open in a new tab).
+Deployed project can be found [here](https://all-cooped-up-12274f373445.herokuapp.com/) (right-click to open in a new tab).
+
+### A note on the name
+_"All Cooped Up"_ is play on words relating to the site's purpose being to review co-operatively played games.  It also harks back to Covid-19 lockdowns where there was an large increase in the numbers of people playing video games together online whilst they were "cooped up" at home. 
 
 ## Alert
 An occasional intermittent Server Error (500) is occasionally occuring on the deployed site.  This will be fully investigated and resolved, but should you experience the error please refresh your browser page.  Any submissions (such as comments and reviews) will have been processed and confirmation of such should be near the top of the screen.
-
-#### A note on the name
-_"All Cooped Up"_ is play on words relating to the site's purpose being to review co-operatively played games.  It also harks back to Covid-19 lockdowns where there was an large increase in the numbers of people playing video games together online whilst they were "cooped up" at home. 
 
 ## Table of Contents:
 
